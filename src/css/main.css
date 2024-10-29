@@ -1,1 +1,58 @@
-/*# sourceMappingURL=main.css.map */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1166px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 734px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 480px;
+  }
+  hr {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: 365px;
+  }
+}
+@media (max-width: 365px) {
+  .container {
+    width: 320px;
+  }
+}/*# sourceMappingURL=main.css.map */
