@@ -33,26 +33,8 @@ hr {
   margin: 0 auto;
 }
 
-@media (max-width: 1200px) {
-  .container {
-    width: 734px;
-  }
-}
-@media (max-width: 768px) {
-  .container {
-    width: 480px;
-  }
-  hr {
-    display: none;
-  }
-}
-@media (max-width: 480px) {
-  .container {
-    width: 365px;
-  }
-}
-@media (max-width: 365px) {
-  .container {
-    width: 320px;
-  }
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
