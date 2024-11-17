@@ -1,3 +1,11 @@
 @import "../utils/mixins",
 "../utils/placeholders",
 "../utils/variable";
+
+.football {
+    &__content{
+        &-text{
+
+        }
+    }
+}

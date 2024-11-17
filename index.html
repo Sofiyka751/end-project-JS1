@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">  
     <link rel="stylesheet" href="./src/css/main.css">
     <link rel="stylesheet" href="./src/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,28 +16,6 @@
   <body>
     <header class="header">
       <div class="container header__content">
-        <!-- <nav class="header__content-navbar">
-          <div class="header__content-navbar-navigation">
-            <div class="header__content-navbar-navigation-first">
-              <a href="#" class="header__content-navbar-navigation-first-logo">
-                <svg></svg> logo
-              </a>
-              <div class="header__content-navbar-navigation-first-nav">
-                <div class="dropdown">
-                  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-                  <div id="myDropdown" class="dropdown-content">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="header__content-navbar-navigation-second">
-
-            </div>
-          </div>
-        </nav> -->
       </div>
     </header>
 
@@ -45,25 +24,39 @@
         <div class="container birthday__content">
           <p class="birthday__content-text">Перевір в який рік ти народився</p>
           <div class="birthday__content-play">
-            <input type="number" class="birthday__content-play-year" placeholder="Введіть рік народження">
-            <p class="birthday__content-play-text"></p>
+            <div class="birthday__content-play-group">
+              <input type="number" class="birthday__content-play-year" placeholder="Введіть рік народження">
+              <a href="#" class="birthday-group-icon-search">
+                <svg id="birthday-icon-search">
+                  <use id="birthday-search" href="./src/svg/symbol-defs.svg#icon-search"></use>
+                </svg>
+              </a>
+            </div>
+            <p class="birthday__content-play-text">Введіть рік народження</p>
           </div>
         </div>
       </section>
 
-      <!-- <hr class="line"> -->
+      <hr class="line">
 
       <section class="computer-number">
         <div class="container computer-number__content">
           <p class="computer-number__content-text">Вгадай число, яке загадав комп’ютер</p>
           <div class="computer-number__content-play">
-            <input type="number" class="computer-number__content-play-number" placeholder="Введіть число">
-            <p class="computer-number__content-play-text"></p>
+            <div class="computer-number__content-play-group">
+              <input type="number" id="guess" class="computer-number__content-play-number" placeholder="Введіть число" >
+              <button onclick="checkGuess()" class="computer-number-group-icon-search">
+                <svg id="computer-number-icon-search">
+                  <use id="computer-number-search" href="./src/svg/symbol-defs.svg#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+            <p id="number-result" class="computer-number__content-play-text">Введіть число</p>
           </div>
         </div>
       </section>
 
-      <!-- <hr class="line"> -->
+      <hr class="line">
 
       <section class="rock-paper-scissor">
         <div class="container rock-paper-scissor__content">
@@ -71,14 +64,14 @@
           <div class="rock-paper-scissor__content-play">
             <div class="rock-paper-scissor__content-play-up">
               <div class="rock-paper-scissor__content-play-up-first">
-                <button href="#" class="rock-paper-scissor__content-play-up-first-button">
-                  <!-- svg -->
+                <button onclick="playGame('камінь')" class="rock-paper-scissor__content-play-up-first-button">
+                  <img src="./src/images/stone.png" alt="ups" class="rock-paper-scissor__content-play-up-first-button-image">
                 </button>
-                <button href="#" class="rock-paper-scissor__content-play-up-first-button">
-                  <!-- svg -->
+                <button onclick="playGame('ножиці')" class="rock-paper-scissor__content-play-up-first-button">
+                  <img src="./src/images/scissors.png" alt="ups" class="rock-paper-scissor__content-play-up-first-button-image">
                 </button>
-                <button href="#" class="rock-paper-scissor__content-play-up-first-button">
-                  <!-- svg -->
+                <button onclick="playGame('папір')" class="rock-paper-scissor__content-play-up-first-button">
+                  <img src="./src/images/paper.png" alt="ups" class="rock-paper-scissor__content-play-up-first-button-image">
                 </button>
               </div>
               <div class="rock-paper-scissor__content-play-up-second">
@@ -86,120 +79,187 @@
                   рахунок:
                 </p>
                 <p class="rock-paper-scissor__content-play-up-second-text">
-                  <!-- рахунок -->
+                  Комп’ютер - <span id="computerScore">0</span>
                 </p>
                 <p class="rock-paper-scissor__content-play-up-second-text">
-                  <!-- рахунок -->
+                  Ви - <span id="userScore">0</span>
                 </p>
               </div>
             </div>
             <div class="rock-paper-scissor__content-play-down">
-              <p class="rock-paper-scissor__content-play-down-text"></p>
+              <p id="result" class="rock-paper-scissor__content-play-down-text">Оберіть варіант відповіді</p>
               <button class="rock-paper-scissor__content-play-down-button">Варіант комп’ютера</button>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- <hr class="line"> -->
+      <hr class="line">
 
       <section class="calculator">
         <div class="container calculator__content">
           <p class="calculator__content-text">калькулятор</p>
           <div class="calculator__content-play">
-            <input type="number" class="calculator__content-play-number-first" placeholder="Введіть число">
+            <input type="number" id="num1" class="calculator__content-play-number-first" placeholder="Введіть число">
             <div class="calculator__content-play-actions">
-              <button class="calculator__content-play-actions-button-first">+</button>
-              <button class="calculator__content-play-actions-button-second">-</button>
-              <button class="calculator__content-play-actions-button-third">*</button>
-              <button class="calculator__content-play-actions-button-fourth">/</button>
+              <div class="calculator__content-play-actions-group1">
+                <button id="operator" class="calculator__content-play-actions-button-first" value="+">+</button>
+                <button id="operator" class="calculator__content-play-actions-button-second" value="-">-</button>
+              </div>
+              <div class="calculator__content-play-actions-group2">
+                <button id="operator" class="calculator__content-play-actions-button-third" value="*">*</button>
+              <button id="operator" class="calculator__content-play-actions-button-fourth" value="/">/</button>
+              </div>
             </div>
-            <input type="number" class="calculator__content-play-number-second" placeholder="Введіть число">
-            <button class="calculator__content-play-button">=</button>
-            <p class="calculator__content-play-resault">результат</p>
+            <input id="num2" type="number" class="calculator__content-play-number-second" placeholder="Введіть число">
+            <button onclick="calculate()" class="calculator__content-play-button">=</button>
+            <p id="calculator-result" class="calculator__content-play-resault">результат</p>
           </div>
         </div>
       </section>
 
-      <!-- <hr class="line"> -->
+      <hr class="line">
 
       <section class="calculator-time">
         <div class="container calculator-time__content">
           <p class="calculator-time__content-text">калькулятор часу</p>
           <div class="calculator-time__content-play">
-            <input type="number" class="calculator-time__content-play-number" placeholder="Введіть число">
-            <p class="calculator-time__content-play-text"></p>
+            <div class="calculator-time__content-play-group">
+              <input type="number" class="calculator-time__content-play-number" placeholder="Введіть число">
+              <a href="#" class="calculator-time-group-icon-search">
+                <svg id="calculator-time-icon-search">
+                  <use id="calculator-time-search" href="./src/svg/symbol-defs.svg#icon-search"></use>
+                </svg>
+              </a>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="2" viewBox="0 0 100 2" fill="none">
+              <path d="M0 1H100" stroke="black" stroke-dasharray="2 2"/>
+            </svg>
+            <p class="calculator-time__content-play-text">Введіть кількість хвилин</p>
           </div>
         </div>
       </section>
 
-      <!-- <hr class="line"> -->
+      <hr class="line">
 
       <section class="football">
         <div class="container football__content">
-
+          <p class="football__content-text">Футбол</p>
         </div>
       </section>
 
-      <!-- <hr class="line"> -->
+      <hr class="line">
 
       <section class="three-number">
         <div class="container three-number__content">
           <p class="three-number__content-text">Введіть 3 числа</p>
           <div class="three-number__content-play">
             <div class="three-number__content-play-numbers">
-              <input type="number" class="calculator-time__content-play-numbers-first" placeholder="Введіть число">
-              <input type="number" class="calculator-time__content-play-numbers-second" placeholder="Введіть число">
-              <input type="number" class="calculator-time__content-play-numbers-third" placeholder="Введіть число">
+              <input type="number" id="three-number1" class="three-number__content-play-numbers-first" placeholder="Введіть число">
+              <input type="number" id="three-number2" class="three-number__content-play-numbers-second" placeholder="Введіть число">
+              <input type="number" id="three-number3" class="three-number__content-play-numbers-third" placeholder="Введіть число">
             </div>
-            <p class="three-number__content-play-resault"></p>
+            <p id="three-number-result" class="three-number__content-play-resault">Найбільше число, яке ви ввели - (число)</p>
           </div>
         </div>
       </section>
 
-      <!-- <hr class="line"> -->
+      <hr class="line">
 
-      <section class="team">
-        <div class="container team__content">
-          <!-- слайдер -->
-          <p>тут буде слайдер</p>
+      <section id="mySlider" class="team splide">
+        <div class="container team__content splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img class="splide__slide-image" src="./src/images/will.jpg" alt="upss" width="150px" height="150px">
+              <p class="splide__slide-name">Will</p>
+              <p class="splide__slide-info">Frontend Developer</p>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__slide-image" src="./src/images/Mary.jpg" alt="upss" width="150px" height="150px">
+              <p class="splide__slide-name">Mary</p>
+              <p class="splide__slide-info">UI/UX Design</p>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__slide-image" src="./src/images/mike.jpg" alt="upss" width="150px" height="150px">
+              <p class="splide__slide-name">Mike</p>
+              <p class="splide__slide-info">Backend Developer</p>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__slide-image" src="./src/images/den.jpg" alt="upss" width="150px" height="150px">
+              <p class="splide__slide-name">Den</p>
+              <p class="splide__slide-info">Fullstack Developer</p>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__slide-image" src="./src/images/olga.jpg" alt="upss" width="150px" height="150px">
+              <p class="splide__slide-name">Olga</p>
+              <p class="splide__slide-info">Software Development</p>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__slide-image" src="./src/images/kinn.jpg" alt="upss" width="150px" height="150px">
+              <p class="splide__slide-name">Kinn</p>
+              <p class="splide__slide-info">CMS Develope</p>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__slide-image" src="./src/images/linda.jpg" alt="upss" width="150px" height="150px">
+              <p class="splide__slide-name">Linda</p>
+              <p class="splide__slide-info">SEO Developer</p>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <!-- <hr class="line"> -->
+      <hr class="line">
 
       <section class="scientists">
         <div class="container scientists__content">
+          <p class="scientists__content-text">Обери вченого/их</p>
           <div class="scientists__content-photos">
-            <img src="" alt="ups" class="scientist">
-            <img src="" alt="ups" class="scientist">
-            <img src="" alt="ups" class="scientist">
-            <img src="" alt="ups" class="scientist">
-            <img src="" alt="ups" class="scientist">
-            <img src="" alt="ups" class="scientist">
-            <img src="" alt="ups" class="scientist">
-            <img src="" alt="ups" class="scientist">
-            <img src="" alt="ups" class="scientist">
-            <img src="" alt="ups" class="scientist">
-            <img src="" alt="ups" class="scientist">
-            <img src="" alt="ups" class="scientist">
+            <div class="scientists__content-photos-group1">
+              <img src="./src/images/Einstein.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Newton.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Galilei.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Curie.jpg" alt="ups" class="scientist" width="150px" height="150px">  
+            </div>
+            <div class="scientists__content-photos-group2">
+              <img src="./src/images/Kepler.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Copernicus.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Plank.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Blodgett.jpg" alt="ups" class="scientist" width="150px" height="150px">
+            </div>
+            <div class="scientists__content-photos-group3">
+              <img src="./src/images/Ada_Lovelace.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Goode.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Lise_Meitner.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Hanna_Hammarström.jpg" alt="ups" class="scientist" width="150px" height="150px">
+            </div>
           </div>
           <div class="scientists__content-buttons">
-            <div class="scientists__content-buttons-first">
-
-            </div>
-            <div class="scientists__content-buttons-second">
-
+            <div class="scientists__content-buttons-group">
+              <div class="scientists__content-buttons-first">
+                <button class="scientists__content-buttons-first-button">Які вчені народилися в 19 ст.</button>
+                <button class="scientists__content-buttons-first-button">Відсортувати вчених за алфавітом</button>
+                <button class="scientists__content-buttons-first-button">Відсортувати вчених за кількістю прожитих років</button>
+                <button class="scientists__content-buttons-first-button">Знайти вченого, який народився найпізніше</button>
+              </div>
+              <div class="scientists__content-buttons-second">
+                <button class="scientists__content-buttons-second-button">Знайти рік народження Albert Einshtein</button>
+                <button class="scientists__content-buttons-second-button">Знайти вчених, прізвища яких починаються на на літеру “С” </button>
+                <button class="scientists__content-buttons-second-button">Видалити всіх вчених, ім’я яких починається на “А”</button>
+                <button class="scientists__content-buttons-second-button">Знайти вченого, який прожив найдовше і вченого, 
+який прожив найменше</button>
+              </div>
             </div>
             <div class="scientists__content-buttons-third">
-
+              <button class="scientists__content-buttons-third-button">Знайти вчених, в яких співпадають перші літери імені і прізвища</button>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <script type="module" src="./main.js"></script>
+    <!-- <script type="module" src="/main.js" defer></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="./main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous" ></script>
   </body>

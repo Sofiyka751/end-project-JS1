@@ -1,3 +1,66 @@
-@import "../utils/mixins",
-"../utils/placeholders",
-"../utils/variable";
+@import "../utils/mixins", "../utils/placeholders", "../utils/variable";
+
+.splide__arrow--prev,
+.splide__arrow--next {
+  background: none;
+}
+
+.team {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-name {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: $black;
+    font-family: "Montserrat Alternates";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &-info {
+    color: $black;
+    font-family: "Montserrat Alternates";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.splide {
+  &__track {
+  }
+  &__list {
+  }
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-image {
+      border-radius: 20px;
+      background: $second-grey-background;
+      width: 150px;
+      height: 150px;
+    }
+    &-name{
+      margin-top: 20px;
+    }
+    &-info{
+      
+    }
+  }
+  &__pagination {
+    bottom: auto;
+    &__page {
+      border-radius: 11%;
+      height: 3px;
+      width: 18px;
+      &.is-active {
+        background: $pagination-background;
+      }
+    }
+  }
+}

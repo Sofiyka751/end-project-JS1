@@ -1,3 +1,70 @@
-@import "../utils/mixins",
-"../utils/placeholders",
-"../utils/variable";
+@import "../utils/mixins", "../utils/placeholders", "../utils/variable";
+
+.computer-number {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-text {
+      color: $black;
+      font-family: "Montserrat Alternates";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &-play {
+      display: flex;
+      align-items: center;
+      gap: 150px;
+      &-group {
+        position: relative;
+      }
+      &-number {
+        display: inline-flex;
+        padding: 10px 45px 10px 10px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 20px;
+        border: none;
+        background: $grey-background;
+        box-shadow: 3px 3px 0px 0px $shadow;
+        // text
+        color: #7e7e7e;
+        font-family: "Montserrat Alternates";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      &-text {
+        color: $error-color;
+        text-align: right;
+        font-family: "Montserrat Alternates";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}
+.computer-number-group-icon-search {
+  width: 43px;
+  height: 38px;
+  position: absolute;
+  right: 1px;
+  bottom: -2px;
+  border-radius: 0px 20px 20px 0px;
+  background: $black;
+}
+
+#computer-number-icon-search {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 17px;
+  bottom: 15px;
+}
+#computer-number-search {
+}

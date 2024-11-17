@@ -1,3 +1,65 @@
-@import "../utils/mixins",
-"../utils/placeholders",
-"../utils/variable";
+@import "../utils/mixins", "../utils/placeholders", "../utils/variable";
+
+.rock-paper-scissor {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-text {
+    }
+    &-play {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-up {
+        margin-left: 200px;
+        display: flex;
+        align-items: flex-start;
+        gap: 105px;
+        &-first {
+          display: flex;
+          gap: 38px;
+          &-button {
+            border-radius: 20px;
+            padding: 10px;
+            border: none;
+            background: $black;
+            &-image {
+            }
+          }
+        }
+        &-second {
+          &-text {
+          }
+        }
+      }
+      &-down {
+        &-text {
+          color: $error-color;
+          text-align: right;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        &-button {
+          display: inline-flex;
+          padding: 10px 20px;
+          align-items: flex-start;
+          gap: 10px;
+          border-radius: 20px;
+          border: none;
+          background: $black;
+          //   text
+          color: $white;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}

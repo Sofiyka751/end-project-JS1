@@ -1,3 +1,86 @@
-@import "../utils/mixins",
-"../utils/placeholders",
-"../utils/variable";
+@import "../utils/mixins", "../utils/placeholders", "../utils/variable";
+
+.three-number {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-text {
+      color: $black;
+      font-family: "Montserrat Alternates";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &-play {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+      &-numbers {
+        display: flex;
+        gap: 38px;
+        &-first {
+          display: inline-flex;
+          padding: 10px 20px;
+          align-items: flex-start;
+          gap: 10px;
+          border-radius: 20px;
+          border: none;
+          background: #d7d7d7;
+          box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+          // text
+          color: #7e7e7e;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        &-second {
+          display: inline-flex;
+          padding: 10px 20px;
+          align-items: flex-start;
+          gap: 10px;
+          border-radius: 20px;
+          border: none;
+          background: #d7d7d7;
+          box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+          // text
+          color: #7e7e7e;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        &-third {
+          display: inline-flex;
+          padding: 10px 20px;
+          align-items: flex-start;
+          gap: 10px;
+          border-radius: 20px;
+          border: none;
+          background: #d7d7d7;
+          box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+          // text
+          color: #7e7e7e;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+      &-resault {
+        color: $black;
+        font-family: "Montserrat Alternates";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}

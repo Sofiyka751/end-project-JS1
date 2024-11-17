@@ -1,3 +1,165 @@
-@import "../utils/mixins",
-"../utils/placeholders",
-"../utils/variable";
+@import "../utils/mixins", "../utils/placeholders", "../utils/variable";
+
+.calculator {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-text {
+      color: $black;
+      font-family: "Montserrat Alternates";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &-play {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+      &-number-first {
+        display: inline-flex;
+        padding: 10px 20px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 20px;
+        border: none;
+        background: $grey-background;
+        box-shadow: 3px 3px 0px 0px $shadow;
+        // text
+        color: #7e7e7e;
+        font-family: "Montserrat Alternates";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      &-actions {
+        display: flex;
+        gap: 10px;
+        &-group1 {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        &-group2 {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        &-button-first {
+          border-radius: 20px;
+          background: $black;
+          box-shadow: 3px 3px 0px 0px $shadow;
+          display: inline-flex;
+          padding: 5px 10px;
+          align-items: flex-start;
+          gap: 10px;
+          // text
+          color: $white;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        &-button-second {
+          border-radius: 20px;
+          background: $black;
+          box-shadow: 3px 3px 0px 0px $shadow;
+          display: inline-flex;
+          padding: 5px 10px;
+          align-items: flex-start;
+          gap: 10px;
+          // text
+          color: $white;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        &-button-third {
+          border-radius: 20px;
+          background: $black;
+          box-shadow: 3px 3px 0px 0px $shadow;
+          display: inline-flex;
+          padding: 5px 10px;
+          align-items: flex-start;
+          gap: 10px;
+          // text
+          color: $white;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        &-button-fourth {
+          border-radius: 20px;
+          background: $black;
+          box-shadow: 3px 3px 0px 0px $shadow;
+          display: inline-flex;
+          padding: 5px 10px;
+          align-items: flex-start;
+          gap: 10px;
+          // text
+          color: $white;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+      &-number-second {
+        display: inline-flex;
+        padding: 10px 20px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 20px;
+        border: none;
+        background: $grey-background;
+        box-shadow: 3px 3px 0px 0px $shadow;
+        // text
+        color: #7e7e7e;
+        font-family: "Montserrat Alternates";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      &-button {
+        border-radius: 20px;
+        background: $black;
+        box-shadow: 3px 3px 0px 0px $shadow;
+        display: inline-flex;
+        padding: 5px 10px;
+        align-items: flex-start;
+        gap: 10px;
+        // text
+        color: $white;
+        font-family: "Montserrat Alternates";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      &-resault {
+        display: inline-flex;
+        padding: 10px 20px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 20px;
+        background: $grey-background;
+        // text
+        color: #7e7e7e;
+        font-family: "Montserrat Alternates";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}
