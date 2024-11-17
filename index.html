@@ -3,37 +3,264 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" ></script>
     <title>JS Games</title>
-    <script type="module" crossorigin src="/end-project-JS1/assets/index-YbP7J65e.js"></script>
-    <link rel="stylesheet" crossorigin href="/end-project-JS1/assets/index-dgOt3p2b.css">
+    <link rel="stylesheet" crossorigin href="/end-project-JS1/assets/index-CnYhMpe0.css">
   </head>
   <body>
     <header class="header">
-      <div class="container header__content">
+      <div class="container header__content">]
         
       </div>
     </header>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"
-    ></script>
+    <main class="main">
+      <section class="birthday">
+        <div class="container birthday__content">
+          <p class="birthday__content-text">Перевір в який рік ти народився</p>
+          <div class="birthday__content-play">
+            <div class="birthday__content-play-group">
+              <input type="number" class="birthday__content-play-year" placeholder="Введіть рік народження">
+              <a href="#" class="birthday-group-icon-search">
+                <svg id="birthday-icon-search">
+                  <use id="birthday-search" href="/end-project-JS1/assets/symbol-defs-a5WAm1MU.svg#icon-search"></use>
+                </svg>
+              </a>
+            </div>
+            <p class="birthday__content-play-text">Введіть рік народження</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="line">
+
+      <section class="computer-number">
+        <div class="container computer-number__content">
+          <p class="computer-number__content-text">Вгадай число, яке загадав комп’ютер</p>
+          <div class="computer-number__content-play">
+            <div class="computer-number__content-play-group">
+              <input type="number" id="guess" class="computer-number__content-play-number" placeholder="Введіть число" >
+              <button onclick="checkGuess()" class="computer-number-group-icon-search">
+                <svg id="computer-number-icon-search">
+                  <use id="computer-number-search" href="/end-project-JS1/assets/symbol-defs-a5WAm1MU.svg#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+            <p id="number-result" class="computer-number__content-play-text">Введіть число</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="line">
+
+      <section class="rock-paper-scissor">
+        <div class="container rock-paper-scissor__content">
+          <p class="rock-paper-scissor__content-text">Камінь - ножиці - папір</p>
+          <div class="rock-paper-scissor__content-play">
+            <div class="rock-paper-scissor__content-play-up">
+              <div class="rock-paper-scissor__content-play-up-first">
+                <button onclick="playGame('камінь')" class="rock-paper-scissor__content-play-up-first-button">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAObSURBVHgB7ZhbiE1fHMd/2/8vuV9ySW6DRCm5PbibhAdCYfIgNWFSeDASJbcUHlwj5UERkUguiUJGro+IyHVm3Mu432pcts/P/p3s2c7eZ+/OGTycb31ac9b6rd/6nd9ee/3WGZG88srrz8l13bZwEp7Dp5h8hCswI53P/yVHYoECmjJ4CCVQFXPqf9AXtuLjheM4R/2DjuRAOO5EcxYKYC9U+4ZvwX4WrsjgYxnNUOxG+fvrSPbBdRQvc3VhC9yFSuMJ6IL6CMdkcKWZL5BcSh8r3IMj0DjCrhTeWKbDbIrhruQwuPbq0IKrG8NeX57TEh3gPclhgLfhGNSLad8RXkNhyHihjXeTbIWTIiiHJgnnrbR59UPGV8Mr6CfZCAebYI8klAYGtzTQCJsV8A4mSRzp5rf0z4ND9hhS2igJZb70hekcYbPU/E9y0gy2odEUj4QhkNoTep5dFO+8uw6t4QCc5uwqkWRBHhTvcN4Gl+AyPr4GbDTL4/wdi+EmfLcsHbKsDQ/ba3bMlMM2SRZgka1RZuudsf7uMNDn201NWAsVsMYWrIT1Vr4yLZYKcovElM35Ao2gDjSz/lLrfwv7fwaog9bZ1+dgMly2fXAAhoATI8hNMeJLvSzTQ8Yc26d3UgEO1DSHGGvKd7rejSMo/VIfoAoew0vr3yw5kG2tn9FO5fNsNungCOOGNEthLoyHb/L7RUPrenPYDYPwdzXCn9p2B729VIXYFNCU63WrDzyQCOFEM7iKP4vgC5/PRyy+hqY3XOXv+bTpXrAp0AO+YaNfqDKNjdbt+xqgHiknJIMI6j1NV8msagtUS6AeU8Eb0wTYAAOgC5TCAtCndA0qzO4jTBR7ezNdhWILXzegOGSsp+1TJ9DfDna53vlYQ5rBptDB/VX/npKtZ/bqx8mYX/o4W8GbQADqS7PV0rqG6QsWmKtzfqsu+pIspJ0jXopV+whwruuVsWmSTHqwXmf+CKkZYDHNOl+XPvbgyfEZZjH3uPwpEVhLaC3/kgioCZTABd+Zqbfu8fI3RQD9YZ3r1dinsNyqVCdY5Ho1d16aeQ2kNmVl7ixUu94NuzDEbjR8hV6B/jIYK7Ulq8E7oHkM21OwJNDXTGpLVtQ/uxG/6AL22/XLSAJl+7u4BTywKhPX/q0kUFb/WdAKQPMIdPPrbft7hLnW1l3iXTrO1QjCca5IbQRoQU62RTtkME13OIv1zSTIw5JXXnkl1w+hI21FYJQvEQAAAABJRU5ErkJggg==" alt="ups" class="rock-paper-scissor__content-play-up-first-button-image">
+                </button>
+                <button onclick="playGame('ножиці')" class="rock-paper-scissor__content-play-up-first-button">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUYSURBVHgBxZh7iFR1FMd/I1tRUq0ZhBbttGyZ7qbuP1ZSNutWVGCQvWwtlIjMiF64Qu8x0zDRqCipjIlSyszSNqmonFCyh39U2haVNrtEUVEqtZWP3NP38PtePP2cuXtHZsYDH+495/c+9/xe17mEIiJHgjfBSncQgnIp8A3YDOqTlhvkksudoBmcjwYmuvJlGjgc7AOdrtKCTm0FHSALPnRlCsoUwE3gYvALKMc5A1Z+kngZqp8H/AHayih/HegBdeA41tXgKiWorBXsNLp6MV9G+a/ALUZXGe0qJaisCexSD1A/AewBmQRlp9J7w6jXsYMjXKUElQ0Be0Ha2BaC9xKU7QaLjT6WdQ12lRRU+CW41eiN4E9wZkyZNvB3MLBOsMFVWlDp/eCDwPYieC2mzPtgaWD7Dkx3Veigzt6dNu7wPobxdHqR/JrWH3hvMvix4p/XNPBUOHuhrwUvFMn7EsgFtq/BHFct4ezdDcYb2zn01HBja6Rn08Z2Keiztmp1cilYE9jW6aw2eg48H+R5Bzzjqi1opIXeGWZsGcanxmma6Y0m/ewwHqvdyYlFbHkwl95bHqTpOnqtq6WgwQvB8UZXL+6gp8YYewM4w9Va0OhqsCiwfaRrX2BbFq6FNRHjsaHGNpm2euqnhLO51p3UuMsaXU/Nn4PZ1HPF1siaifFivbFdSduoUrtMTQUdWA8e4LsuM8eCb8WfwN9yh1qMx7Rzr4OrxJ9YVDKu1oJGBwkPrtTnsTNZjUHa9FD6M5jvaiGMteXiLzuR7AP/sCOLwK+cJC30pHBN/ET8dbOPefLgkaQzu26AjqXx0F1hFNDZOANsAXtAA59fOH+VnMI0vZquAro494Gxzl9vt7NaTdedqCB+v56TSqV6XLmCwhMYW89Kgos28swSf3o+zyUQ8Xu2elM72lwqX6pE4RY8NoKFGN1c2s7C42oQLcybwavR6JF+DB69YBpsb5i6dHCXgZHOX9zV4+uQp5fpGqcdoB22bS7ByOo5qqyxLWZM6a8PPfrrhUmP83+BVpNPy20MvPQbYzCnn1TTGY+zTb7Hxf8SOTpJBzXgtxr9QTY8rkjeTbJ/15jOfBoWl9B2F1hbpNwU5us0Tvkh0uM6dxTYDi6nfo34m1tTkbzRua+J+vfgei4362k7YKcx5c/lLJ9AvYN5j4jroG72Bb6n6JFZJfLmwMum8l79RPSGNpRhWl5K3EMYOtFgBtM57S6mg3opeo7v0Sc7zBX3Xn8Uf3huA/eZdA2TPN/bYrwYDmYlWGDzhH+YdGPv4bs2vgkza687UO4GXUj7DBXqDNXgtqeWeWCcfj7k0Y52g9vDSpCm/3u6wCSadGU4La6DKrv5/Nf5hfh/In7xngqW0HQbWBEtG2xYF+VlHIjKQ5pPiq+nOrh+vu8Cpddc8Te2p/k+XvwV0y4j+kn0Breaul6G9CdSQ5G6RnAStTKeN0R128EyVNqp5yTu9G1mXfQnKssKNDaeAL+DLcK7CJ5dElzOg/reBq+YzhRY/h7wKNuaz/QG8X/BrnBxIn4xflf8zqB6M3gYPAlulP2/4GaKPyikY+o6lQPMUD8Z3MuZvQJMMnnXaLtuIEGm4eLXtO5SjYs/8+kuMjNBfXfQ840l0oewswVJendhrC1hDOnRaYb4g+kNjEHdqm52CYWhIoyxC+jZi/hldtCjJ7pyBYVGgsfAxxzhp2CBmJtcGXWNFv9D6SfxPzB1a1ulHY4r9x8sZYTvEaI5uQAAAABJRU5ErkJggg==" alt="ups" class="rock-paper-scissor__content-play-up-first-button-image">
+                </button>
+                <button onclick="playGame('папір')" class="rock-paper-scissor__content-play-up-first-button">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPGSURBVHgBzZjbSxVBHMd/53S0i9HNskyLk5imRBYhWBAFBUU9hPQPFARBFPQolC9FhX9BEIVQRK8VQdBTPUSZRVfSTDPzUl4yESm7bt+vM3sat93TOcc9u37hw+7MmT3zndmZ+c1ORDKUZVn7cLkE+kAv+AaegjHwAoyAQTAQiUQGJUPFJHNVglZwCizTFIJqsBusA3NYEI0ZxeUD6AY9+p4NeQK+gk40ostvg/NAE/74mlcBGItp08VgBSgApaAELAW1oArkoCwfGRDV62wI38qZqRhcD+4lKwDzP3Vl5L54N2SWNjobLBf1NurAjakYzAUduoIcXIpEvXZWEBfVU2vAarAVZh+Jd0PGcWlymD6Ny2hEUhQeWIJLvq6QnBA1nuaKenV5Oj0EXoM34B04As7DxLk06mLH/WA9MccPC0W1ukybKNLpYg3FWfsSXNUGOG6aRc3WIZfKtojq0XTECcaebY/hDzbh/or87YUvoE1UL3wCF0X1DGdsjx5X6YjDoCq9RyYm4DBvYtoY2UVTbmsWGhHXt8V6tqUjLjGVxn+4qQ/1fjfSnOEDduUVlpLrhEF+rZV9NTjqPApu8z4quitFjTc3zRf1emdkCUajHEedHP8c6xJD1/bDLRPlwHU1p1Dut2RBlvuY4ZBr501UZ3ASrJTpI0adt7yxDbaADUkeSHm99Ekcbgx1iVjMRIlHYQ7WXxKsaJC7o0QPsjvL3Upi7HEJuCwBScdldtxEGDVfcZnHA3FwSIITNyHsGG4wEgYZOfJgJN/lgW3gmAQn9mC3nZgwqGMoQ1y5hC+ugR12Imr8wNBSKuGLE2TcTpgGm8U7mgQpxuFeO2Ea5CahTMIXo0giopkG+QFTKeGLb/G9nXD24HR4xYkoQpkGuUUv8tp2BSHUPVOUwcnLjFabvoY5k/nBxbjfb2ckDBqfiGGuhZ9BHbyM2BlRR4FXoj6SQhGNgUm7a6fBjxLivlDH/Qozz2mQX3KLJTwdACfNDKdBTu9qCU+coK1mhtPgQ1CAbs6VcMRZPGZmOA1yV8OP90IJVofRKdw0bxRjkaYmLcrcdqEgt11sSZf4LPw317hFjmyeaN0CFwDPf+7+708eg4NGej9oEX8M1nt8uJ/1eibqkseQF5fsiCeu18EqwDMhLmvPQYPXA25xlyGvBq2qwXUt2CPqBMAvMVpwQ9qoDe4wI0cqBjtBPdiszfLP/Pzs5AS8I+psejvMDScr/I9BPNCI3rtpn3JxDOJy3Ep+OpWqeM6zEzxLxVxKgrG9lr96ABakWv8f2KEAJ8oKq2cAAAAASUVORK5CYII=" alt="ups" class="rock-paper-scissor__content-play-up-first-button-image">
+                </button>
+              </div>
+              <div class="rock-paper-scissor__content-play-up-second">
+                <p class="rock-paper-scissor__content-play-up-second-text">
+                  рахунок:
+                </p>
+                <p class="rock-paper-scissor__content-play-up-second-text">
+                  Комп’ютер - <span id="computerScore">0</span>
+                </p>
+                <p class="rock-paper-scissor__content-play-up-second-text">
+                  Ви - <span id="userScore">0</span>
+                </p>
+              </div>
+            </div>
+            <div class="rock-paper-scissor__content-play-down">
+              <p id="result" class="rock-paper-scissor__content-play-down-text">Оберіть варіант відповіді</p>
+              <button class="rock-paper-scissor__content-play-down-button">Варіант комп’ютера</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="line">
+
+      <section class="calculator">
+        <div class="container calculator__content">
+          <p class="calculator__content-text">калькулятор</p>
+          <div class="calculator__content-play">
+            <input type="number" id="num1" class="calculator__content-play-number-first" placeholder="Введіть число">
+            <div class="calculator__content-play-actions">
+              <div class="calculator__content-play-actions-group1">
+                <button id="operator" class="calculator__content-play-actions-button-first" value="+">+</button>
+                <button id="operator" class="calculator__content-play-actions-button-second" value="-">-</button>
+              </div>
+              <div class="calculator__content-play-actions-group2">
+                <button id="operator" class="calculator__content-play-actions-button-third" value="*">*</button>
+              <button id="operator" class="calculator__content-play-actions-button-fourth" value="/">/</button>
+              </div>
+            </div>
+            <input id="num2" type="number" class="calculator__content-play-number-second" placeholder="Введіть число">
+            <button onclick="calculate()" class="calculator__content-play-button">=</button>
+            <p id="calculator-result" class="calculator__content-play-resault">результат</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="line">
+
+      <section class="calculator-time">
+        <div class="container calculator-time__content">
+          <p class="calculator-time__content-text">калькулятор часу</p>
+          <div class="calculator-time__content-play">
+            <div class="calculator-time__content-play-group">
+              <input type="number" class="calculator-time__content-play-number" placeholder="Введіть число">
+              <a href="#" class="calculator-time-group-icon-search">
+                <svg id="calculator-time-icon-search">
+                  <use id="calculator-time-search" href="/end-project-JS1/assets/symbol-defs-a5WAm1MU.svg#icon-search"></use>
+                </svg>
+              </a>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="2" viewBox="0 0 100 2" fill="none">
+              <path d="M0 1H100" stroke="black" stroke-dasharray="2 2"/>
+            </svg>
+            <p class="calculator-time__content-play-text">Введіть кількість хвилин</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="line">
+
+      <section class="football">
+        <div class="container football__content">
+          <p class="football__content-text">Футбол</p>
+        </div>
+      </section>
+
+      <hr class="line">
+
+      <section class="three-number">
+        <div class="container three-number__content">
+          <p class="three-number__content-text">Введіть 3 числа</p>
+          <div class="three-number__content-play">
+            <div class="three-number__content-play-numbers">
+              <input type="number" id="three-number1" class="three-number__content-play-numbers-first" placeholder="Введіть число">
+              <input type="number" id="three-number2" class="three-number__content-play-numbers-second" placeholder="Введіть число">
+              <input type="number" id="three-number3" class="three-number__content-play-numbers-third" placeholder="Введіть число">
+            </div>
+            <p id="three-number-result" class="three-number__content-play-resault">Найбільше число, яке ви ввели - (число)</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="line">
+
+      <section id="mySlider" class="team splide">
+        <div class="container team__content splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img class="splide__slide-image" src="/end-project-JS1/assets/will-mO20v8h6.jpg" alt="upss" width="150px" height="150px">
+              <p class="splide__slide-name">Will</p>
+              <p class="splide__slide-info">Frontend Developer</p>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__slide-image" src="/end-project-JS1/assets/Mary-CjUzLQZk.jpg" alt="upss" width="150px" height="150px">
+              <p class="splide__slide-name">Mary</p>
+              <p class="splide__slide-info">UI/UX Design</p>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__slide-image" src="/end-project-JS1/assets/mike-_0hX2i2N.jpg" alt="upss" width="150px" height="150px">
+              <p class="splide__slide-name">Mike</p>
+              <p class="splide__slide-info">Backend Developer</p>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__slide-image" src="/end-project-JS1/assets/den-CxNr2095.jpg" alt="upss" width="150px" height="150px">
+              <p class="splide__slide-name">Den</p>
+              <p class="splide__slide-info">Fullstack Developer</p>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__slide-image" src="/end-project-JS1/assets/olga-omR6aDQf.jpg" alt="upss" width="150px" height="150px">
+              <p class="splide__slide-name">Olga</p>
+              <p class="splide__slide-info">Software Development</p>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__slide-image" src="/end-project-JS1/assets/kinn-B4-PewW3.jpg" alt="upss" width="150px" height="150px">
+              <p class="splide__slide-name">Kinn</p>
+              <p class="splide__slide-info">CMS Develope</p>
+            </li>
+            <li class="splide__slide">
+              <img class="splide__slide-image" src="/end-project-JS1/assets/linda-C3ut2v5y.jpg" alt="upss" width="150px" height="150px">
+              <p class="splide__slide-name">Linda</p>
+              <p class="splide__slide-info">SEO Developer</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <hr class="line">
+
+      <section class="scientists">
+        <div class="container scientists__content">
+          <p class="scientists__content-text">Обери вченого/их</p>
+          <div class="scientists__content-photos">
+            <div class="scientists__content-photos-group1">
+              <img src="/end-project-JS1/assets/Einstein-CkiNNgyf.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Newton-ClK88pHk.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Galilei-Xlgzm0BU.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Curie-BZoq2Dnh.jpg" alt="ups" class="scientist" width="150px" height="150px">  
+            </div>
+            <div class="scientists__content-photos-group2">
+              <img src="/end-project-JS1/assets/Kepler-DJDJwqMR.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Copernicus-CuzmcJZ8.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Plank-DEqYvoyA.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Blodgett-CdSnafgL.jpg" alt="ups" class="scientist" width="150px" height="150px">
+            </div>
+            <div class="scientists__content-photos-group3">
+              <img src="/end-project-JS1/assets/Ada_Lovelace-ByTzGHxO.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Goode-BeDavsZr.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Lise_Meitner-CWFSHwUG.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Hanna_Hammarstr%C3%B6m-Buftw3E_.jpg" alt="ups" class="scientist" width="150px" height="150px">
+            </div>
+          </div>
+          <div class="scientists__content-buttons">
+            <div class="scientists__content-buttons-group">
+              <div class="scientists__content-buttons-first">
+                <button class="scientists__content-buttons-first-button">Які вчені народилися в 19 ст.</button>
+                <button class="scientists__content-buttons-first-button">Відсортувати вчених за алфавітом</button>
+                <button class="scientists__content-buttons-first-button">Відсортувати вчених за кількістю прожитих років</button>
+                <button class="scientists__content-buttons-first-button">Знайти вченого, який народився найпізніше</button>
+              </div>
+              <div class="scientists__content-buttons-second">
+                <button class="scientists__content-buttons-second-button">Знайти рік народження Albert Einshtein</button>
+                <button class="scientists__content-buttons-second-button">Знайти вчених, прізвища яких починаються на на літеру “С” </button>
+                <button class="scientists__content-buttons-second-button">Видалити всіх вчених, ім’я яких починається на “А”</button>
+                <button class="scientists__content-buttons-second-button">Знайти вченого, який прожив найдовше і вченого, 
+який прожив найменше</button>
+              </div>
+            </div>
+            <div class="scientists__content-buttons-third">
+              <button class="scientists__content-buttons-third-button">Знайти вчених, в яких співпадають перші літери імені і прізвища</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- <script type="module" src="/main.js" defer></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous" ></script>
   </body>
 </html>
