@@ -1,3 +1,51 @@
-@import "../utils/mixins",
-"../utils/placeholders",
-"../utils/variable";
+@import "../utils/mixins", "../utils/placeholders", "../utils/variable";
+
+.header {
+    margin: 33px 0;
+  &__content {
+    &-group {
+      display: flex;
+      gap: 91px;
+      justify-content: center;
+      &-logo {
+      }
+      &-nav {
+        &-list {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+          &-select {
+            border: none;
+            &-option {
+              color: #000;
+              font-family: "Montserrat Alternates";
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+          &-link {
+            color: #000;
+            font-family: "Montserrat Alternates";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+.navigation {
+  &-list {
+    &-select {
+      &-option {
+      }
+    }
+    &-link {
+    }
+  }
+}

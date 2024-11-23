@@ -6,18 +6,18 @@ let birthday = document.querySelector(".birthday__content-play-year");
 let birthdayText = document.querySelector(".birthday__content-play-text");
 let birthdayButton = document.querySelector(".birthday-group-icon-search");
 function checkYear(year) {
-    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0) === true) {
-        birthdayText.textContent = 'Ви народилися у високосний рік!';
-        birthdayText.style.color = 'green'
-    } else {
-        birthdayText.textContent = 'Ви народилися у не високосний рік!';
-        birthdayText.style.color = 'red'
-    }
+  if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0) === true) {
+    birthdayText.textContent = "Ви народилися у високосний рік!";
+    birthdayText.style.color = "green";
+  } else {
+    birthdayText.textContent = "Ви народилися у не високосний рік!";
+    birthdayText.style.color = "red";
+  }
 }
 birthdayButton.addEventListener("click", () => {
-    let year = Number(birthday.value);
-    checkYear(year);
-})
+  let year = Number(birthday.value);
+  checkYear(year);
+});
 
 // COMPUTER-NUMBER
 
@@ -31,10 +31,10 @@ function checkGuess() {
     resultElement.textContent = "Будь ласка, введіть число!";
   } else if (userGuess === secretNumber) {
     resultElement.textContent = `Вітаю! Ви вгадали число ${secretNumber}!`;
-    resultElement.Style.color = 'green'
+    resultElement.Style.color = "green";
   } else {
     resultElement.textContent = `Ви програли. Комп’ютер загадав число ${secretNumber}.`;
-    resultElement.Style.color = 'red'
+    resultElement.Style.color = "red";
   }
 }
 
@@ -52,18 +52,35 @@ function getComputerChoice() {
 function playRound(userChoice) {
   const computerChoice = getComputerChoice();
 
-  if (userChoice === computerChoice) {
-    return "Нічия!";
-  } else if (
-    (userChoice === "камінь" && computerChoice === "ножиці") ||
-    (userChoice === "ножиці" && computerChoice === "папір") ||
-    (userChoice === "папір" && computerChoice === "камінь")
-  ) {
-    userScore++;
-    return "Ти виграв!";
-  } else {
-    computerScore++;
-    return "Комп'ютер виграв!";
+  // switch
+
+  //   if (userChoice === computerChoice) {
+  //     return "Нічия!";
+  //   } else if (
+  //     (userChoice === "камінь" && computerChoice === "ножиці") ||
+  //     (userChoice === "ножиці" && computerChoice === "папір") ||
+  //     (userChoice === "папір" && computerChoice === "камінь")
+  //   ) {
+  //     userScore++;
+  //     return "Ти виграв!";
+  //   } else {
+  //     computerScore++;
+  //     return "Комп'ютер виграв!";
+  //   }
+
+  switch (true) {
+    case userChoice === computerChoice:
+      return "Нічия!";
+
+    case userChoice === "камінь" && computerChoice === "ножиці":
+    case userChoice === "ножиці" && computerChoice === "папір":
+    case userChoice === "папір" && computerChoice === "камінь":
+      userScore++;
+      return "Ти виграв!";
+
+    default:
+      computerScore++;
+      return "Комп'ютер виграв!";
   }
 }
 
@@ -137,10 +154,9 @@ function maxNumberFunc(first, second, third) {
 
 const mySlider = new Splide("#mySlider", {
   perPage: 1,
-  gap: "30px"
+  gap: "30px",
 });
 
 mySlider.mount();
 
 // SCIENTISTS
-

@@ -1,11 +1,111 @@
-@import "../utils/mixins",
-"../utils/placeholders",
-"../utils/variable";
+@import "../utils/mixins", "../utils/placeholders", "../utils/variable";
 
-.football {
-    &__content{
-        &-text{
-
-        }
+.footer {
+  margin: 60px 0;
+  &__content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    gap: 190px;
+    &-logo {
     }
+    &-adres-group {
+      display: flex;
+      flex-direction: column;
+      &-text {
+        &-phone_number {
+          color: $black;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 170%;
+          margin-bottom: 0;
+        }
+        &-email {
+          color: $black;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 170%;
+          margin-bottom: 0;
+        }
+        &-facebook {
+          color: $black;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 170%;
+          margin-bottom: 0;
+        }
+        &-twitter {
+          color: $black;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 170%;
+          margin-bottom: 0;
+        }
+        &-instagram {
+          color: $black;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 170%;
+          margin-bottom: 0;
+        }
+      }
+    }
+    &-subscribe {
+      &-main {
+        display: flex;
+        gap: 36px;
+        margin-bottom: 18px;
+        &-email {
+          display: inline-flex;
+          padding: 10px 80px 10px 10px;
+          align-items: flex-start;
+          gap: 10px;
+          border-radius: 20px;
+          border: none;
+          background: $grey-background;
+          // TEXT
+          color: $text-color;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        &-button {
+          display: inline-flex;
+          padding: 10px;
+          align-items: flex-start;
+          gap: 10px;
+          border: none;
+          border-radius: 20px;
+          background: $black;
+          // TEXT
+          color: $white;
+          font-family: "Montserrat Alternates";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+      &-text {
+        color: $black;
+        font-family: "Montserrat Alternates";
+        font-size: 6px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
 }

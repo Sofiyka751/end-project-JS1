@@ -1,12 +1,13 @@
 @import "../utils/mixins", "../utils/placeholders", "../utils/variable";
 
 .scientists {
+  margin-bottom: 36px;
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     &-text {
-      color: #000;
+      color: $black;
       font-family: "Montserrat Alternates";
       font-size: 16px;
       font-style: normal;
@@ -47,7 +48,7 @@
         align-items: flex-end;
         gap: 20px;
         &-button {
-          color: #fff;
+          color: $white;
           text-align: right;
           font-family: "Montserrat Alternates";
           font-size: 12px;
@@ -59,8 +60,8 @@
           align-items: flex-start;
           gap: 10px;
           border-radius: 20px;
-          background: #000;
-          box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+          background: $black;
+          box-shadow: 3px 3px 0px 0px $shadow;
         }
       }
       &-second {
@@ -70,7 +71,7 @@
         gap: 20px;
         &-button {
           white-space: pre;
-          color: #fff;
+          color: $white;
           text-align: right;
           font-family: "Montserrat Alternates";
           font-size: 12px;
@@ -82,13 +83,13 @@
           align-items: flex-start;
           gap: 10px;
           border-radius: 20px;
-          background: #000;
-          box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+          background: $black;
+          box-shadow: 3px 3px 0px 0px $shadow;
         }
       }
       &-third {
         &-button {
-          color: #fff;
+          color: $white;
           text-align: right;
           font-family: "Montserrat Alternates";
           font-size: 12px;
@@ -100,8 +101,8 @@
           align-items: flex-start;
           gap: 10px;
           border-radius: 20px;
-          background: #000;
-          box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+          background: $black;
+          box-shadow: 3px 3px 0px 0px $shadow;
         }
       }
     }
@@ -110,4 +111,3 @@
 .scientist {
   border-radius: 20px;
 }
-

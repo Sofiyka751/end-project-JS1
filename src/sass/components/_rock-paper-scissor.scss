@@ -34,6 +34,9 @@
         }
       }
       &-down {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         &-text {
           color: $error-color;
           text-align: right;
@@ -63,4 +66,3 @@
     }
   }
 }
-
