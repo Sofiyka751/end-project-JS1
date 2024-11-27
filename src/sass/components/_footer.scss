@@ -1,12 +1,13 @@
 @import "../utils/mixins", "../utils/placeholders", "../utils/variable";
 
 .footer {
-  margin: 60px 0;
+  background-color: #fff;
+  padding: 60px 0;
   &__content {
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
-    gap: 190px;
+    gap: 180px;
     &-logo {
     }
     &-adres-group {

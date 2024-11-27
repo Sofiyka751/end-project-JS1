@@ -33,9 +33,40 @@
               <a href="#" class="header__content-group-nav-list-link navigation-list-link">Наша команда</a>
               <a href="#" class="header__content-group-nav-list-link navigation-list-link">Контакти</a>
             </div>
+            <div class="header__content-group-nav-list-second">
+              <div id="output">Вітаємо, User!</div>
+            </div>
           </nav>
         </div>
+        <!-- Модальне вікно -->
+        <!-- <div id="modal">
+          <div id="modalContent">
+            <h2>Введіть своє ім’я</h2>
+            <input type="text" id="userName" placeholder="Ваше ім’я">
+            <button id="submitName">OK</button>
+          </div>
+        </div>
       </div>
+
+      <div id="thankYouModal">
+        <div id="thankYouContent">
+          <h2>Дякую за відповідь!</h2>
+        </div>
+      </div> -->
+      <div id="modal">
+        <div id="modalContent">
+          <h2>Введіть своє ім’я</h2>
+          <input type="text" id="userName" placeholder="Ваше ім’я">
+          <button id="submitName">OK</button>
+        </div>
+      </div>
+    </div>
+  
+    <div id="thankYouModal">
+      <div id="thankYouContent">
+        <h2>Дякую за відповідь!</h2>
+      </div>
+    </div>
     </header>
 
     <main class="main">
@@ -117,22 +148,28 @@
 
       <section class="calculator">
         <div class="container calculator__content">
-          <p class="calculator__content-text">калькулятор</p>
+          <p class="calculator__content-text">Калькулятор</p>
           <div class="calculator__content-play">
-            <input type="number" id="num1" class="calculator__content-play-number-first" placeholder="Введіть число">
-            <div class="calculator__content-play-actions">
-              <div class="calculator__content-play-actions-group1">
-                <button id="operator-plus operator" class="calculator__content-play-actions-button-first" value="+">+</button>
-                <button id="operator-minus operator" class="calculator__content-play-actions-button-second" value="-">-</button>
+            <form class="calculator__content-play-form">
+                <input class="calculator__content-play-form-number1" type="text" id="calculator-first-number" name="first-number" placeholder="Введіть число">
+              <div class="calculator__content-play-form-group">
+                <div class="calculator__content-play-form-group1">
+                  <input class="calculator__content-play-form-group-plus" type="radio" id="calculator-plus" name="calculator-operator" value="+">
+                  <label class="calculator__content-play-form-group-plus-label" for="calculator-plus">+</label>
+                  <input class="calculator__content-play-form-group-multiplication" type="radio" id="calculator-multiplication" name="calculator-operator" value="*">
+                  <label class="calculator__content-play-form-group-multiplication-label" for="calculator-multiplication">*</label>
+                </div>
+                <div class="calculator__content-play-form-group2"> 
+                <input class="calculator__content-play-form-group-minus" type="radio" id="calculator-minus" name="calculator-operator" value="-">
+                <label class="calculator__content-play-form-group-minus-label" for="calculator-minus">-</label>
+                <input class="calculator__content-play-form-group-division" type="radio" id="calculator-division" name="calculator-operator" value="/">
+                <label class="calculator__content-play-form-group-division-label" for="calculator-division">/</label>
+                </div>
               </div>
-              <div class="calculator__content-play-actions-group2">
-                <button id="operator-multiplication operator" class="calculator__content-play-actions-button-third" value="*">*</button>
-                <button id="operator-division operator" class="calculator__content-play-actions-button-fourth" value="/">/</button>
-              </div>
-            </div>
-            <input id="num2" type="number" class="calculator__content-play-number-second" placeholder="Введіть число">
-            <button onclick="calculate()" class="calculator__content-play-button">=</button>
-            <p id="calculator-result" class="calculator__content-play-resault">результат</p>
+                <input class="calculator__content-play-form-number2" type="text" id="calculator-second-number" name="second-number" placeholder="Введіть число">
+              <button class="calculator__content-play-form-group-button" type="button" id="calculator-decision" name="calculator-decision">=</button>
+            </form>
+            <p class="calculator__content-play-resault">Результат</p>
           </div>
         </div>
       </section>
@@ -144,7 +181,7 @@
           <p class="calculator-time__content-text">калькулятор часу</p>
           <div class="calculator-time__content-play">
             <div class="calculator-time__content-play-group">
-              <input type="number" class="calculator-time__content-play-number" placeholder="Введіть число">
+              <input type="number" class="calculator-time__content-play-number" id="time" placeholder="Введіть число">
               <a href="#" class="calculator-time-group-icon-search">
                 <svg id="calculator-time-icon-search">
                   <use id="calculator-time-search" href="./src/svg/symbol-defs.svg#icon-search"></use>
@@ -159,11 +196,17 @@
         </div>
       </section>
 
+
       <hr class="line">
 
       <section class="football">
         <div class="container football__content">
           <p class="football__content-text">Футбол</p>
+          <div class="field" id="field">
+            <div class="ball" id="ball">
+              <img src="./src/images/football-ball.png" alt="ups">
+            </div>
+          </div>
         </div>
       </section>
 
@@ -234,22 +277,22 @@
           <p class="scientists__content-text">Обери вченого/их</p>
           <div class="scientists__content-photos">
             <div class="scientists__content-photos-group1">
-              <img src="./src/images/Einstein.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Newton.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Galilei.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Curie.jpg" alt="ups" class="scientist" width="150px" height="150px">  
+              <img src="./src/images/Einstein.jpg" alt="ups" id="1" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Newton.jpg" alt="ups" id="2" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Galilei.jpg" alt="ups" id="3" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Curie.jpg" alt="ups" id="4" class="scientist" width="150px" height="150px">  
             </div>
             <div class="scientists__content-photos-group2">
-              <img src="./src/images/Kepler.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Copernicus.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Plank.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Blodgett.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Kepler.jpg" alt="ups" id="5" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Copernicus.jpg" alt="ups" id="6" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Plank.jpg" alt="ups" id="7" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Blodgett.jpg" alt="ups" id="8" class="scientist" width="150px" height="150px">
             </div>
             <div class="scientists__content-photos-group3">
-              <img src="./src/images/Ada_Lovelace.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Goode.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Lise_Meitner.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Hanna_Hammarström.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Ada_Lovelace.jpg" alt="ups" id="9" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Goode.jpg" alt="ups" id="10" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Lise_Meitner.jpg" alt="ups" id="11" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Hanna_Hammarström.jpg" alt="ups" id="12" class="scientist" width="150px" height="150px">
             </div>
           </div>
           <div class="scientists__content-buttons">

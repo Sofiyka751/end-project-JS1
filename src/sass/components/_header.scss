@@ -1,7 +1,8 @@
 @import "../utils/mixins", "../utils/placeholders", "../utils/variable";
 
 .header {
-    margin: 33px 0;
+  background-color: #fff;
+  padding: 33px 0;
   &__content {
     &-group {
       display: flex;
@@ -10,10 +11,13 @@
       &-logo {
       }
       &-nav {
+        display: flex;
+        align-items: center;
+        gap: 350px;
         &-list {
-            display: flex;
-            gap: 50px;
-            align-items: center;
+          display: flex;
+          gap: 50px;
+          align-items: center;
           &-select {
             border: none;
             &-option {
@@ -48,4 +52,14 @@
     &-link {
     }
   }
+}
+
+#output {
+  color: #000;
+  text-align: right;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }

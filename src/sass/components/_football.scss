@@ -2,7 +2,39 @@
 
 .football {
   &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &-text {
+      color: #000;
+      font-family: "Montserrat Alternates";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
     }
   }
+}
+
+body {
+  margin: 0;
+}
+
+.field {
+  position: relative;
+  width: 720px;
+  height: 220px;
+  flex-shrink: 0;
+  border-radius: 37px;
+  border: 2px solid #000;
+  background: #5abb58;
+}
+
+.ball {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #3498db;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }

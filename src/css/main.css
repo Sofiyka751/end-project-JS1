@@ -28,12 +28,18 @@ hr {
 }
 
 .header {
-  margin: 33px 0;
+  background-color: #fff;
+  padding: 33px 0;
 }
 .header__content-group {
   display: flex;
   gap: 91px;
   justify-content: center;
+}
+.header__content-group-nav {
+  display: flex;
+  align-items: center;
+  gap: 350px;
 }
 .header__content-group-nav-list {
   display: flex;
@@ -59,6 +65,80 @@ hr {
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+}
+
+#output {
+  color: #000;
+  text-align: right;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#modal input {
+  margin: 10px 0;
+  padding: 8px;
+  width: 80%;
+}
+
+#modal button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#modal button:hover {
+  background-color: #0056b3;
+}
+
+#thankYouModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#thankYouContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .birthday__content {
@@ -247,10 +327,18 @@ hr {
   line-height: normal;
 }
 
+.calculator {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .calculator__content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 36px;
+  padding: 0 230px 36px 230px;
 }
 .calculator__content-text {
   color: #000;
@@ -263,13 +351,19 @@ hr {
 .calculator__content-play {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 38px;
 }
-.calculator__content-play-number-first {
+.calculator__content-play-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+}
+.calculator__content-play-form-number1, .calculator__content-play-form-number2 {
   display: inline-flex;
   padding: 10px 20px;
   align-items: flex-start;
-  gap: 10px;
   border-radius: 20px;
   border: none;
   background: #d7d7d7;
@@ -281,124 +375,68 @@ hr {
   font-weight: 400;
   line-height: normal;
 }
-.calculator__content-play-actions {
+.calculator__content-play-form-group {
+  width: 62px;
+  height: 60px;
+  flex-shrink: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
 }
-.calculator__content-play-actions-group1 {
+.calculator__content-play-form-group1, .calculator__content-play-form-group2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.calculator__content-play-actions-group2 {
+.calculator__content-play-form-group-plus, .calculator__content-play-form-group-multiplication, .calculator__content-play-form-group-minus, .calculator__content-play-form-group-division {
+  display: none !important;
+}
+.calculator__content-play-form-group-plus-label, .calculator__content-play-form-group-multiplication-label, .calculator__content-play-form-group-minus-label, .calculator__content-play-form-group-division-label {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.calculator__content-play-actions-button-first {
+  padding: 5px 10px;
+  align-items: flex-start;
   border-radius: 20px;
   background: #000;
   box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
-  display: inline-flex;
-  padding: 5px 10px;
-  align-items: flex-start;
-  gap: 10px;
   color: #fff;
   font-family: "Montserrat Alternates";
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  cursor: pointer;
 }
-.calculator__content-play-actions-button-second {
+.calculator__content-play-form-group-button {
+  display: flex;
+  padding: 5px 10px;
+  align-items: flex-start;
   border-radius: 20px;
   background: #000;
   box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
-  display: inline-flex;
-  padding: 5px 10px;
-  align-items: flex-start;
-  gap: 10px;
   color: #fff;
   font-family: "Montserrat Alternates";
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-.calculator__content-play-actions-button-third {
-  border-radius: 20px;
-  background: #000;
-  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
-  display: inline-flex;
-  padding: 5px 10px;
-  align-items: flex-start;
-  gap: 10px;
-  color: #fff;
-  font-family: "Montserrat Alternates";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.calculator__content-play-actions-button-fourth {
-  border-radius: 20px;
-  background: #000;
-  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
-  display: inline-flex;
-  padding: 5px 10px;
-  align-items: flex-start;
-  gap: 10px;
-  color: #fff;
-  font-family: "Montserrat Alternates";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.calculator__content-play-number-second {
-  display: inline-flex;
-  padding: 10px 20px;
-  align-items: flex-start;
-  gap: 10px;
-  border-radius: 20px;
-  border: none;
-  background: #d7d7d7;
-  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
-  color: #7e7e7e;
-  font-family: "Montserrat Alternates";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.calculator__content-play-button {
-  border-radius: 20px;
-  background: #000;
-  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
-  display: inline-flex;
-  padding: 5px 10px;
-  align-items: flex-start;
-  gap: 10px;
-  color: #fff;
-  font-family: "Montserrat Alternates";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  cursor: pointer;
 }
 .calculator__content-play-resault {
-  display: inline-flex;
-  padding: 10px 20px;
-  align-items: flex-start;
-  gap: 10px;
-  border-radius: 20px;
-  background: #d7d7d7;
   color: #7e7e7e;
   font-family: "Montserrat Alternates";
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  display: inline-flex;
+  padding: 10px 20px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 20px;
+  background: #d7d7d7;
+  margin: 0;
 }
 
 .calculator-time__content {
@@ -464,6 +502,43 @@ hr {
   position: absolute;
   right: 17px;
   bottom: 15px;
+}
+
+.football__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.football__content-text {
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.field {
+  position: relative;
+  width: 720px;
+  height: 220px;
+  flex-shrink: 0;
+  border-radius: 37px;
+  border: 2px solid #000;
+  background: #5abb58;
+}
+
+.ball {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #3498db;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
 .three-number__content {
@@ -620,9 +695,11 @@ hr {
 }
 .scientists__content-photos {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 36px;
   margin-bottom: 36px;
+  justify-content: flex-end;
+  margin-right: 73px;
 }
 .scientists__content-photos-group1 {
   display: flex;
@@ -713,13 +790,14 @@ hr {
 }
 
 .footer {
-  margin: 60px 0;
+  background-color: #fff;
+  padding: 60px 0;
 }
 .footer__content {
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
-  gap: 190px;
+  gap: 180px;
 }
 .footer__content-adres-group {
   display: flex;
@@ -814,6 +892,12 @@ hr {
   line-height: normal;
 }
 
+body {
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .container {
   width: 1166px;
   padding: 0 15px;
@@ -824,6 +908,8 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #fff;
+  margin: 0 175px;
 }
 
 .line {
