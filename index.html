@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" ></script>
     <title>JS Games</title>
-    <link rel="stylesheet" crossorigin href="/end-project-JS1/assets/index-DKvqc7Bf.css">
+    <link rel="stylesheet" crossorigin href="/end-project-JS1/assets/index-CCfXNM0b.css">
   </head>
   <body>
     <header class="header">
@@ -32,9 +32,40 @@
               <a href="#" class="header__content-group-nav-list-link navigation-list-link">Наша команда</a>
               <a href="#" class="header__content-group-nav-list-link navigation-list-link">Контакти</a>
             </div>
+            <div class="header__content-group-nav-list-second">
+              <div id="output">Вітаємо, User!</div>
+            </div>
           </nav>
         </div>
+        <!-- Модальне вікно -->
+        <!-- <div id="modal">
+          <div id="modalContent">
+            <h2>Введіть своє ім’я</h2>
+            <input type="text" id="userName" placeholder="Ваше ім’я">
+            <button id="submitName">OK</button>
+          </div>
+        </div>
       </div>
+
+      <div id="thankYouModal">
+        <div id="thankYouContent">
+          <h2>Дякую за відповідь!</h2>
+        </div>
+      </div> -->
+      <div id="modal">
+        <div id="modalContent">
+          <h2>Введіть своє ім’я</h2>
+          <input type="text" id="userName" placeholder="Ваше ім’я">
+          <button id="submitName">OK</button>
+        </div>
+      </div>
+    </div>
+  
+    <div id="thankYouModal">
+      <div id="thankYouContent">
+        <h2>Дякую за відповідь!</h2>
+      </div>
+    </div>
     </header>
 
     <main class="main">
@@ -116,22 +147,28 @@
 
       <section class="calculator">
         <div class="container calculator__content">
-          <p class="calculator__content-text">калькулятор</p>
+          <p class="calculator__content-text">Калькулятор</p>
           <div class="calculator__content-play">
-            <input type="number" id="num1" class="calculator__content-play-number-first" placeholder="Введіть число">
-            <div class="calculator__content-play-actions">
-              <div class="calculator__content-play-actions-group1">
-                <button id="operator-plus operator" class="calculator__content-play-actions-button-first" value="+">+</button>
-                <button id="operator-minus operator" class="calculator__content-play-actions-button-second" value="-">-</button>
+            <form class="calculator__content-play-form">
+                <input class="calculator__content-play-form-number1" type="text" id="calculator-first-number" name="first-number" placeholder="Введіть число">
+              <div class="calculator__content-play-form-group">
+                <div class="calculator__content-play-form-group1">
+                  <input class="calculator__content-play-form-group-plus" type="radio" id="calculator-plus" name="calculator-operator" value="+">
+                  <label class="calculator__content-play-form-group-plus-label" for="calculator-plus">+</label>
+                  <input class="calculator__content-play-form-group-multiplication" type="radio" id="calculator-multiplication" name="calculator-operator" value="*">
+                  <label class="calculator__content-play-form-group-multiplication-label" for="calculator-multiplication">*</label>
+                </div>
+                <div class="calculator__content-play-form-group2"> 
+                <input class="calculator__content-play-form-group-minus" type="radio" id="calculator-minus" name="calculator-operator" value="-">
+                <label class="calculator__content-play-form-group-minus-label" for="calculator-minus">-</label>
+                <input class="calculator__content-play-form-group-division" type="radio" id="calculator-division" name="calculator-operator" value="/">
+                <label class="calculator__content-play-form-group-division-label" for="calculator-division">/</label>
+                </div>
               </div>
-              <div class="calculator__content-play-actions-group2">
-                <button id="operator-multiplication operator" class="calculator__content-play-actions-button-third" value="*">*</button>
-                <button id="operator-division operator" class="calculator__content-play-actions-button-fourth" value="/">/</button>
-              </div>
-            </div>
-            <input id="num2" type="number" class="calculator__content-play-number-second" placeholder="Введіть число">
-            <button onclick="calculate()" class="calculator__content-play-button">=</button>
-            <p id="calculator-result" class="calculator__content-play-resault">результат</p>
+                <input class="calculator__content-play-form-number2" type="text" id="calculator-second-number" name="second-number" placeholder="Введіть число">
+              <button class="calculator__content-play-form-group-button" type="button" id="calculator-decision" name="calculator-decision">=</button>
+            </form>
+            <p class="calculator__content-play-resault">Результат</p>
           </div>
         </div>
       </section>
@@ -143,7 +180,7 @@
           <p class="calculator-time__content-text">калькулятор часу</p>
           <div class="calculator-time__content-play">
             <div class="calculator-time__content-play-group">
-              <input type="number" class="calculator-time__content-play-number" placeholder="Введіть число">
+              <input type="number" class="calculator-time__content-play-number" id="time" placeholder="Введіть число">
               <a href="#" class="calculator-time-group-icon-search">
                 <svg id="calculator-time-icon-search">
                   <use id="calculator-time-search" href="/end-project-JS1/assets/symbol-defs-a5WAm1MU.svg#icon-search"></use>
@@ -158,11 +195,17 @@
         </div>
       </section>
 
+
       <hr class="line">
 
       <section class="football">
         <div class="container football__content">
           <p class="football__content-text">Футбол</p>
+          <div class="field" id="field">
+            <div class="ball" id="ball">
+              <img src="data:image/png;base64,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" alt="ups">
+            </div>
+          </div>
         </div>
       </section>
 
@@ -233,22 +276,22 @@
           <p class="scientists__content-text">Обери вченого/их</p>
           <div class="scientists__content-photos">
             <div class="scientists__content-photos-group1">
-              <img src="/end-project-JS1/assets/Einstein-CkiNNgyf.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="/end-project-JS1/assets/Newton-ClK88pHk.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="/end-project-JS1/assets/Galilei-Xlgzm0BU.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="/end-project-JS1/assets/Curie-BZoq2Dnh.jpg" alt="ups" class="scientist" width="150px" height="150px">  
+              <img src="/end-project-JS1/assets/Einstein-CkiNNgyf.jpg" alt="ups" id="1" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Newton-ClK88pHk.jpg" alt="ups" id="2" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Galilei-Xlgzm0BU.jpg" alt="ups" id="3" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Curie-BZoq2Dnh.jpg" alt="ups" id="4" class="scientist" width="150px" height="150px">  
             </div>
             <div class="scientists__content-photos-group2">
-              <img src="/end-project-JS1/assets/Kepler-DJDJwqMR.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="/end-project-JS1/assets/Copernicus-CuzmcJZ8.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="/end-project-JS1/assets/Plank-DEqYvoyA.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="/end-project-JS1/assets/Blodgett-CdSnafgL.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Kepler-DJDJwqMR.jpg" alt="ups" id="5" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Copernicus-CuzmcJZ8.jpg" alt="ups" id="6" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Plank-DEqYvoyA.jpg" alt="ups" id="7" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Blodgett-CdSnafgL.jpg" alt="ups" id="8" class="scientist" width="150px" height="150px">
             </div>
             <div class="scientists__content-photos-group3">
-              <img src="/end-project-JS1/assets/Ada_Lovelace-ByTzGHxO.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="/end-project-JS1/assets/Goode-BeDavsZr.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="/end-project-JS1/assets/Lise_Meitner-CWFSHwUG.jpg" alt="ups" class="scientist" width="150px" height="150px">
-              <img src="/end-project-JS1/assets/Hanna_Hammarstr%C3%B6m-Buftw3E_.jpg" alt="ups" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Ada_Lovelace-ByTzGHxO.jpg" alt="ups" id="9" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Goode-BeDavsZr.jpg" alt="ups" id="10" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Lise_Meitner-CWFSHwUG.jpg" alt="ups" id="11" class="scientist" width="150px" height="150px">
+              <img src="/end-project-JS1/assets/Hanna_Hammarstr%C3%B6m-Buftw3E_.jpg" alt="ups" id="12" class="scientist" width="150px" height="150px">
             </div>
           </div>
           <div class="scientists__content-buttons">
