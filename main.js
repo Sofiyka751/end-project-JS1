@@ -11,18 +11,18 @@ window.onload = () => {
 };
 
 function handleUserNameInput() {
-  const userName = userNameInput.value.trim(); 
+  const userName = userNameInput.value.trim();
   if (userName) {
-    output.textContent = `Привіт, ${userName}!`; 
-    modal.style.display = "none"; 
-    openThankYouModal(); 
+    output.textContent = `Привіт, ${userName}!`;
+    modal.style.display = "none";
+    openThankYouModal();
   } else {
     alert("Будь ласка, введіть своє ім’я!");
   }
 }
 
 function openThankYouModal() {
-  thankYouModal.style.display = "flex"; 
+  thankYouModal.style.display = "flex";
   setTimeout(() => {
     thankYouModal.style.display = "none";
   }, 3000);
@@ -34,7 +34,6 @@ userNameInput.addEventListener("keydown", (event) => {
     handleUserNameInput();
   }
 });
-
 
 // BIRTHDAY
 
@@ -143,6 +142,7 @@ decisionButton.addEventListener("click", () => {
     alert("Будь ласка, заповніть всі поля введеня.");
   }
 });
+
 function calculator(firstNum, operator, secondNum) {
   let result;
   firstNum = Number(firstNum);
@@ -164,18 +164,22 @@ function calculator(firstNum, operator, secondNum) {
       result = "Невідомий знак";
       break;
   }
+  if (typeof result === "number") {
+    result = result.toFixed(3);
+  }
   textResult.textContent = result;
 }
+
 
 // CALCULATOR-TIME
 
 const time = document.querySelector("#time");
 const timeButton = document.querySelector(".calculator-time-group-icon-search");
-const timeResault = document.querySelector(
-  ".calculator-time__content-play-text"
-);
+const timeResault = document.querySelector('.calculator-time__content-play-text');
 
-timeButton.addEventListener("click", () => {
+timeButton.addEventListener("click", (event) => {
+  event.preventDefault(); 
+
   const totalMinutes = parseInt(time.value);
 
   if (isNaN(totalMinutes) || totalMinutes < 0) {
@@ -401,3 +405,24 @@ document
 document
   .querySelectorAll(".scientists__content-buttons-third-button")[0]
   .addEventListener("click", getScientistsWithMatchingInitials);
+
+// FOOTER
+
+const emailInput = document.querySelector(".footer__content-subscribe-main-email");
+const errorMessage = document.createElement("span");
+
+errorMessage.style.color = "red";
+errorMessage.style.fontSize = "12px";
+errorMessage.style.display = "none"; 
+emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
+
+emailInput.addEventListener("blur", () => {
+  const emailValue = emailInput.value;
+
+  if (!emailValue.includes("@")) {
+    errorMessage.textContent = "Електронна адреса повинна містити символ '@'";
+    errorMessage.style.display = "block"; 
+  } else {
+    errorMessage.style.display = "none";
+  }
+});

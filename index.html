@@ -41,16 +41,28 @@
         <!-- Модальне вікно -->
       <div id="modal">
         <div id="modalContent">
-          <h2>Введіть своє ім’я</h2>
+          <p>Привіт!
+Ви потрапили на сайт інтерактивних ігор та завдань
+Надіємось, що вам сподобається і ви отримаєте позитивні емоції!
+Бажаємо Вам гарно провести час!</p>
+          <p>Введіть своє ім’я</p>
           <input type="text" id="userName" placeholder="Ваше ім’я">
-          <button id="submitName">OK</button>
+          <button id="submitName">Зберегти</button>
+          <img src="./src/images/sword-modal.png" alt="ups" id="modalContentImage1">
+          <img src="./src/images/puzzle-modal.png" alt="ups" id="modalContentImage2">
+          <img src="./src/images/game-development-modal.png" alt="ups" id="modalContentImage3">
+          <img src="./src/images/tic-tac-toe-modal.png" alt="ups" id="modalContentImage4">
         </div>
       </div>
     </div>
   
     <div id="thankYouModal">
       <div id="thankYouContent">
-        <h2>Дякую за відповідь!</h2>
+        <p>Дякую за підписку!</p>
+        <img src="./src/images/sword-modal.png" alt="ups" id="thankYouContentImage1">
+        <img src="./src/images/puzzle-modal.png" alt="ups" id="thankYouContentImage2">
+        <img src="./src/images/game-development-modal.png" alt="ups" id="thankYouContentImage3">
+        <img src="./src/images/tic-tac-toe-modal.png" alt="ups" id="thankYouContentImage4">
       </div>
     </div>
     </header>
@@ -124,7 +136,7 @@
             </div>
             <div class="rock-paper-scissor__content-play-down">
               <p id="result" class="rock-paper-scissor__content-play-down-text">Оберіть варіант відповіді</p>
-              <button class="rock-paper-scissor__content-play-down-button">Варіант комп’ютера</button>
+              <button class="rock-paper-scissor__content-play-down-button" disabled>Варіант комп’ютера</button>
             </div>
           </div>
         </div>
@@ -137,7 +149,7 @@
           <p class="calculator__content-text">Калькулятор</p>
           <div class="calculator__content-play">
             <form class="calculator__content-play-form">
-                <input class="calculator__content-play-form-number1" type="text" id="calculator-first-number" name="first-number" placeholder="Введіть число">
+                <input class="calculator__content-play-form-number1" type="number" id="calculator-first-number" name="first-number" placeholder="Введіть число">
               <div class="calculator__content-play-form-group">
                 <div class="calculator__content-play-form-group1">
                   <input class="calculator__content-play-form-group-plus" type="radio" id="calculator-plus" name="calculator-operator" value="+">
@@ -152,7 +164,7 @@
                 <label class="calculator__content-play-form-group-division-label" for="calculator-division">/</label>
                 </div>
               </div>
-                <input class="calculator__content-play-form-number2" type="text" id="calculator-second-number" name="second-number" placeholder="Введіть число">
+                <input class="calculator__content-play-form-number2" type="number" id="calculator-second-number" name="second-number" placeholder="Введіть число">
               <button class="calculator__content-play-form-group-button" type="button" id="calculator-decision" name="calculator-decision">=</button>
             </form>
             <p class="calculator__content-play-resault">Результат</p>
@@ -218,41 +230,49 @@
         <div class="container team__content splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
-              <img class="splide__slide-image" src="./src/images/will.jpg" alt="upss" width="150px" height="150px">
+              <img class="splide__slide-image" src="./src/images/will.jpg" alt="upss">
               <p class="splide__slide-name">Will</p>
               <p class="splide__slide-info">Frontend Developer</p>
             </li>
             <li class="splide__slide">
-              <img class="splide__slide-image" src="./src/images/Mary.jpg" alt="upss" width="150px" height="150px">
+              <img class="splide__slide-image" src="./src/images/Mary.jpg" alt="upss">
               <p class="splide__slide-name">Mary</p>
               <p class="splide__slide-info">UI/UX Design</p>
             </li>
             <li class="splide__slide">
-              <img class="splide__slide-image" src="./src/images/mike.jpg" alt="upss" width="150px" height="150px">
+              <img class="splide__slide-image" src="./src/images/mike.jpg" alt="upss">
               <p class="splide__slide-name">Mike</p>
               <p class="splide__slide-info">Backend Developer</p>
             </li>
             <li class="splide__slide">
-              <img class="splide__slide-image" src="./src/images/den.jpg" alt="upss" width="150px" height="150px">
+              <img class="splide__slide-image" src="./src/images/den.jpg" alt="upss">
               <p class="splide__slide-name">Den</p>
               <p class="splide__slide-info">Fullstack Developer</p>
             </li>
             <li class="splide__slide">
-              <img class="splide__slide-image" src="./src/images/olga.jpg" alt="upss" width="150px" height="150px">
+              <img class="splide__slide-image" src="./src/images/olga.jpg" alt="upss">
               <p class="splide__slide-name">Olga</p>
               <p class="splide__slide-info">Software Development</p>
             </li>
             <li class="splide__slide">
-              <img class="splide__slide-image" src="./src/images/kinn.jpg" alt="upss" width="150px" height="150px">
+              <img class="splide__slide-image" src="./src/images/kinn.jpg" alt="upss">
               <p class="splide__slide-name">Kinn</p>
               <p class="splide__slide-info">CMS Develope</p>
             </li>
             <li class="splide__slide">
-              <img class="splide__slide-image" src="./src/images/linda.jpg" alt="upss" width="150px" height="150px">
+              <img class="splide__slide-image" src="./src/images/linda.jpg" alt="upss">
               <p class="splide__slide-name">Linda</p>
               <p class="splide__slide-info">SEO Developer</p>
             </li>
           </ul>
+          <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+                <img src="./src/images/arrow1.png" alt="ups">
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+              <img src="./src/images/arrow2.png" alt="ups">
+            </button>
+          </div>
         </div>
       </section>
 
@@ -263,22 +283,22 @@
           <p class="scientists__content-text">Обери вченого/их</p>
           <div class="scientists__content-photos">
             <div class="scientists__content-photos-group1">
-              <img src="./src/images/Einstein.jpg" alt="ups" id="1" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Newton.jpg" alt="ups" id="2" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Galilei.jpg" alt="ups" id="3" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Curie.jpg" alt="ups" id="4" class="scientist" width="150px" height="150px">  
+              <img src="./src/images/Einstein.jpg" alt="ups" id="1" class="scientist">
+              <img src="./src/images/Newton.jpg" alt="ups" id="2" class="scientist">
+              <img src="./src/images/Galilei.jpg" alt="ups" id="3" class="scientist">
+              <img src="./src/images/Curie.jpg" alt="ups" id="4" class="scientist">  
             </div>
             <div class="scientists__content-photos-group2">
-              <img src="./src/images/Kepler.jpg" alt="ups" id="5" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Copernicus.jpg" alt="ups" id="6" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Plank.jpg" alt="ups" id="7" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Blodgett.jpg" alt="ups" id="8" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Kepler.jpg" alt="ups" id="5" class="scientist">
+              <img src="./src/images/Copernicus.jpg" alt="ups" id="6" class="scientist">
+              <img src="./src/images/Plank.jpg" alt="ups" id="7" class="scientist">
+              <img src="./src/images/Blodgett.jpg" alt="ups" id="8" class="scientist">
             </div>
             <div class="scientists__content-photos-group3">
-              <img src="./src/images/Ada_Lovelace.jpg" alt="ups" id="9" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Goode.jpg" alt="ups" id="10" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Lise_Meitner.jpg" alt="ups" id="11" class="scientist" width="150px" height="150px">
-              <img src="./src/images/Hanna_Hammarström.jpg" alt="ups" id="12" class="scientist" width="150px" height="150px">
+              <img src="./src/images/Ada_Lovelace.jpg" alt="ups" id="9" class="scientist">
+              <img src="./src/images/Goode.jpg" alt="ups" id="10" class="scientist">
+              <img src="./src/images/Lise_Meitner.jpg" alt="ups" id="11" class="scientist">
+              <img src="./src/images/Hanna_Hammarström.jpg" alt="ups" id="12" class="scientist">
             </div>
           </div>
           <div class="scientists__content-buttons">
@@ -319,7 +339,7 @@
             <p class="footer__content-adres-group-text-facebook">Facebook: CodingMagic</p>
             <p class="footer__content-adres-group-text-twitter">Twitter: CodingMagic</p>
             <p class="footer__content-adres-group-text-instagram">Instagram: CodingMagic</p>
-          </p>
+          <!-- </p> -->
         </div>
         <div class="footer__content-subscribe">
           <div class="footer__content-subscribe-main">

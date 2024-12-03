@@ -408,6 +408,9 @@ hr {
   line-height: normal;
   cursor: pointer;
 }
+.calculator__content-play-form-group-plus-label:active, .calculator__content-play-form-group-multiplication-label:active, .calculator__content-play-form-group-minus-label:active, .calculator__content-play-form-group-division-label:active {
+  background: blue;
+}
 .calculator__content-play-form-group-button {
   display: flex;
   padding: 5px 10px;
@@ -650,6 +653,10 @@ body {
   line-height: normal;
 }
 
+.splide image {
+  width: 150px;
+  height: 150px;
+}
 .splide__slide {
   display: flex;
   flex-direction: column;
@@ -676,6 +683,10 @@ body {
   background: #797979;
 }
 
+.splide__arrow {
+  width: 350px;
+}
+
 .scientists {
   margin-bottom: 36px;
 }
@@ -696,22 +707,22 @@ body {
 .scientists__content-photos {
   display: flex;
   flex-wrap: wrap;
-  gap: 36px;
   margin-bottom: 36px;
   justify-content: flex-end;
-  margin-right: 73px;
+}
+.scientists__content-photos img {
+  margin: 36px;
+  width: 150px;
+  height: 150px;
 }
 .scientists__content-photos-group1 {
   display: flex;
-  gap: 59px;
 }
 .scientists__content-photos-group2 {
   display: flex;
-  gap: 59px;
 }
 .scientists__content-photos-group3 {
   display: flex;
-  gap: 59px;
 }
 .scientists__content-buttons {
   display: flex;
