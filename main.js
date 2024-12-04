@@ -35,6 +35,24 @@ userNameInput.addEventListener("keydown", (event) => {
   }
 });
 
+// togle
+
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+const toggleIcon = document.querySelector('.toggle-icon');
+
+body.classList.add('light');
+
+themeToggle.addEventListener('change', () => {
+  if (themeToggle.checked) {
+    body.classList.remove('light');
+    body.classList.add('dark');
+  } else {
+    body.classList.remove('dark');
+    body.classList.add('light');
+  }
+});
+
 
 // FOOTER
 

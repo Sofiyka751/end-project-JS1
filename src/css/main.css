@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -38,13 +39,18 @@ hr {
 }
 .header__content-group-nav {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 350px;
 }
 .header__content-group-nav-list {
   display: flex;
   gap: 50px;
   align-items: center;
+}
+.header__content-group-nav-list-second {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
 }
 .header__content-group-nav-list-select {
   border: none;
@@ -75,6 +81,85 @@ hr {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Світла тема */
+body.light {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Контейнер для перемикача */
+.toggle-container {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  margin: 20px;
+}
+
+/* Checkbox (прихований) */
+.toggle-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Лейбл (перемикач) */
+.toggle-label {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s;
+  top: -26px;
+}
+
+/* Коло з іконкою */
+.toggle-icon {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Сонце/місяць */
+.toggle-checkbox:checked + .toggle-label .toggle-icon {
+  transform: translateX(30px);
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #555;
+}
+
+.toggle-checkbox:checked + span {
+  content: url("../../images/moon.png");
 }
 
 #modal {
@@ -141,25 +226,25 @@ hr {
 
 #modalContentImage1 {
   position: absolute;
-  left: 530px;
+  left: 480px;
   top: 330px;
 }
 
 #modalContentImage2 {
   position: absolute;
-  left: 430px;
+  left: 530px;
   top: 430px;
 }
 
 #modalContentImage3 {
   position: absolute;
-  right: 530px;
+  right: 480px;
   top: 330px;
 }
 
 #modalContentImage4 {
   position: absolute;
-  right: 430px;
+  right: 530px;
   top: 430px;
 }
 
