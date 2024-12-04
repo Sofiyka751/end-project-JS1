@@ -40,6 +40,7 @@ userNameInput.addEventListener("keydown", (event) => {
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 const toggleIcon = document.querySelector('.toggle-icon');
+const a = document.querySelector('.header__content-group-nav-list-link')
 
 body.classList.add('light');
 
@@ -47,9 +48,13 @@ themeToggle.addEventListener('change', () => {
   if (themeToggle.checked) {
     body.classList.remove('light');
     body.classList.add('dark');
+    a.classList.remove('header__content-group-nav-list-link');
+    a.classList.add('header__content-group-nav-list-link-dark');
   } else {
     body.classList.remove('dark');
     body.classList.add('light');
+    a.classList.remove('header__content-group-nav-list-link-dark');
+    a.classList.add('header__content-group-nav-list-link');
   }
 });
 

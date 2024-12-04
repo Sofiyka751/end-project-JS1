@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -91,18 +90,6 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Світла тема */
-body.light {
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-body.dark {
-  background-color: #121212;
-  color: #fff;
-}
-
-/* Контейнер для перемикача */
 .toggle-container {
   position: relative;
   display: inline-block;
@@ -111,14 +98,12 @@ body.dark {
   margin: 20px;
 }
 
-/* Checkbox (прихований) */
 .toggle-checkbox {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* Лейбл (перемикач) */
 .toggle-label {
   position: absolute;
   cursor: pointer;
@@ -133,7 +118,6 @@ body.dark {
   top: -26px;
 }
 
-/* Коло з іконкою */
 .toggle-icon {
   position: absolute;
   top: 3px;
@@ -149,7 +133,6 @@ body.dark {
   transition: transform 0.3s, background-color 0.3s;
 }
 
-/* Сонце/місяць */
 .toggle-checkbox:checked + .toggle-label .toggle-icon {
   transform: translateX(30px);
 }
@@ -160,6 +143,16 @@ body.dark {
 
 .toggle-checkbox:checked + span {
   content: url("../../images/moon.png");
+}
+
+.toggle-checkbox:checked + .header__content-group-nav-list-link-dark {
+  color: purple;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
 }
 
 #modal {
