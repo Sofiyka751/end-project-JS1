@@ -27,6 +27,7 @@ hr {
   padding: 0;
 }
 
+
 @import "./components/header", "./components/modal", "./components/birthday",
   "./components/computer-number", "./components/rock-paper-scissor",
   "./components/calculator", "./components/calculator-time",
@@ -34,11 +35,9 @@ hr {
   "./components/scientists", "./components/footer";
 
 body {
-  // background: #eee;
   background-image: url("../images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
-  // background-position: 0 85px;
 }
 
 .container {
@@ -52,7 +51,6 @@ body {
   flex-direction: column;
   align-items: center;
   background: #fff;
-  // background-image: url("../images/background.png");
   margin: 0 175px;
  
 }

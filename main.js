@@ -35,6 +35,31 @@ userNameInput.addEventListener("keydown", (event) => {
   }
 });
 
+
+// FOOTER
+
+const thankYouModalFooter = document.getElementById('thankYouModal'); 
+const submitButtonFooter = document.querySelector('.footer__content-subscribe-main-button'); 
+const userNameInputFooter = document.querySelector('.footer__content-subscribe-main-email'); 
+
+function openThankYouModal() {
+  thankYouModalFooter.style.display = "flex"; 
+  setTimeout(() => {
+    thankYouModalFooter.style.display = "none"; 
+  }, 3000);
+}
+
+submitButtonFooter.addEventListener("click", (event) => {
+  event.preventDefault(); 
+  openThankYouModal(); 
+});
+
+userNameInputFooter.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    openThankYouModal(); 
+  }
+});
+
 // BIRTHDAY
 
 let birthday = document.querySelector(".birthday__content-play-year");
@@ -164,9 +189,15 @@ function calculator(firstNum, operator, secondNum) {
       result = "Невідомий знак";
       break;
   }
+  
   if (typeof result === "number") {
-    result = result.toFixed(3);
+    if (result % 1 !== 0) {
+      result = result.toFixed(3);
+    } else {
+      result = result.toString();
+    }
   }
+
   textResult.textContent = result;
 }
 
