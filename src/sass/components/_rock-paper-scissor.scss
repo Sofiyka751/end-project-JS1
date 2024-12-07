@@ -66,3 +66,20 @@
     }
   }
 }
+
+.rock-paper-scissor__content-play-down-button-dark {
+  display: inline-flex;
+  padding: 10px 20px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 20px;
+  border: none;
+  background: #fff;
+  //   text
+  color: black;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

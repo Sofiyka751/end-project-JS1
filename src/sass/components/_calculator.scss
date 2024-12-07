@@ -80,7 +80,7 @@
               font-weight: 400;
               line-height: normal;
               cursor: pointer;
-              &:active{
+              &:active {
                 background: blue;
               }
             }
@@ -102,7 +102,7 @@
           }
         }
       }
-      
+
       &-resault {
         color: #7e7e7e;
         font-family: "Montserrat Alternates";
@@ -119,5 +119,37 @@
         margin: 0;
       }
     }
+  }
+}
+
+.calculator__content-text-dark {
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.calculator__content-play-form-group-plus-label-dark,
+.calculator__content-play-form-group-multiplication-label-dark,
+.calculator__content-play-form-group-minus-label-dark,
+.calculator__content-play-form-group-division-label-dark,
+.calculator__content-play-form-group-button-dark {
+  display: flex;
+  padding: 5px 10px;
+  align-items: flex-start;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  &:active, &:checked {
+    background: blue;
   }
 }

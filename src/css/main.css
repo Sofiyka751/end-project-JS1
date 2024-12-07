@@ -72,7 +72,7 @@ hr {
   text-decoration: none;
 }
 
-#output {
+.output {
   color: #000;
   text-align: right;
   font-family: "Montserrat Alternates";
@@ -88,6 +88,11 @@ body {
   margin: 0;
   padding: 0;
   transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #fff;
 }
 
 .toggle-container {
@@ -145,14 +150,32 @@ body {
   content: url("../../images/moon.png");
 }
 
-.toggle-checkbox:checked + .header__content-group-nav-list-link-dark {
-  color: purple;
+.header__content-group-nav-list-link-dark {
+  color: #fff;
   font-family: "Montserrat Alternates";
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+}
+
+.header-dark {
+  background-color: #000;
+}
+
+.header-output-dark {
+  color: #fff;
+}
+
+.header__content-group-nav-list-select-dark {
+  background: black;
+  color: white;
+  border: none;
+}
+
+.logo-dark {
+  display: block;
 }
 
 #modal {
@@ -346,7 +369,7 @@ body {
   line-height: normal;
 }
 .birthday__content-play-text {
-  color: #900;
+  color: rgb(255, 6, 6);
   text-align: right;
   font-family: "Montserrat Alternates";
   font-size: 12px;
@@ -371,6 +394,15 @@ body {
   position: absolute;
   right: 17px;
   bottom: 15px;
+}
+
+.birthday__content-text-dark {
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .computer-number__content {
@@ -411,7 +443,7 @@ body {
   line-height: normal;
 }
 .computer-number__content-play-text {
-  color: #900;
+  color: rgb(255, 6, 6);
   text-align: right;
   font-family: "Montserrat Alternates";
   font-size: 12px;
@@ -436,6 +468,15 @@ body {
   position: absolute;
   right: 17px;
   bottom: 15px;
+}
+
+.computer-number__content-text-dark {
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .rock-paper-scissor__content {
@@ -470,7 +511,7 @@ body {
   align-items: center;
 }
 .rock-paper-scissor__content-play-down-text {
-  color: #900;
+  color: rgb(255, 6, 6);
   text-align: right;
   font-family: "Montserrat Alternates";
   font-size: 12px;
@@ -487,6 +528,22 @@ body {
   border: none;
   background: #000;
   color: #fff;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rock-paper-scissor__content-play-down-button-dark {
+  display: inline-flex;
+  padding: 10px 20px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 20px;
+  border: none;
+  background: #fff;
+  color: black;
   font-family: "Montserrat Alternates";
   font-size: 12px;
   font-style: normal;
@@ -609,6 +666,46 @@ body {
   margin: 0;
 }
 
+.calculator__content-text-dark {
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.calculator__content-play-form-group-plus-label-dark,
+.calculator__content-play-form-group-multiplication-label-dark,
+.calculator__content-play-form-group-minus-label-dark,
+.calculator__content-play-form-group-division-label-dark,
+.calculator__content-play-form-group-button-dark {
+  display: flex;
+  padding: 5px 10px;
+  align-items: flex-start;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+.calculator__content-play-form-group-plus-label-dark:active, .calculator__content-play-form-group-plus-label-dark:checked,
+.calculator__content-play-form-group-multiplication-label-dark:active,
+.calculator__content-play-form-group-multiplication-label-dark:checked,
+.calculator__content-play-form-group-minus-label-dark:active,
+.calculator__content-play-form-group-minus-label-dark:checked,
+.calculator__content-play-form-group-division-label-dark:active,
+.calculator__content-play-form-group-division-label-dark:checked,
+.calculator__content-play-form-group-button-dark:active,
+.calculator__content-play-form-group-button-dark:checked {
+  background: blue;
+}
+
 .calculator-time__content {
   display: flex;
   flex-direction: column;
@@ -647,7 +744,7 @@ body {
   line-height: normal;
 }
 .calculator-time__content-play-text {
-  color: #900;
+  color: rgb(255, 6, 6);
   text-align: right;
   font-family: "Montserrat Alternates";
   font-size: 12px;
@@ -672,6 +769,15 @@ body {
   position: absolute;
   right: 17px;
   bottom: 15px;
+}
+
+.calculator-time__content-text-dark {
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .football__content {
@@ -709,6 +815,15 @@ body {
   background-color: #3498db;
   border-radius: 50%;
   transition: transform 0.3s ease;
+}
+
+.football__content-text-dark {
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .three-number__content {
@@ -784,6 +899,24 @@ body {
 }
 .three-number__content-play-resault {
   color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.three-number__content-text-dark {
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.three-number__content-play-resault {
+  color: #fff;
   font-family: "Montserrat Alternates";
   font-size: 12px;
   font-style: normal;
@@ -907,7 +1040,7 @@ body {
   align-items: flex-end;
   gap: 20px;
 }
-.scientists__content-buttons-first-button {
+.scientists__content-buttons-first-button1, .scientists__content-buttons-first-button2, .scientists__content-buttons-first-button3, .scientists__content-buttons-first-button4 {
   color: #fff;
   text-align: right;
   font-family: "Montserrat Alternates";
@@ -929,7 +1062,7 @@ body {
   align-items: flex-start;
   gap: 20px;
 }
-.scientists__content-buttons-second-button {
+.scientists__content-buttons-second-button1, .scientists__content-buttons-second-button2, .scientists__content-buttons-second-button3, .scientists__content-buttons-second-button4 {
   white-space: pre;
   color: #fff;
   text-align: right;
@@ -967,13 +1100,48 @@ body {
   border-radius: 20px;
 }
 
+.scientists__content-text-dark {
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 36px;
+}
+
+.scientists__content-buttons-first-button1-dark,
+.scientists__content-buttons-first-button2-dark,
+.scientists__content-buttons-first-button3-dark,
+.scientists__content-buttons-first-button4-dark,
+.scientists__content-buttons-second-button1-dark,
+.scientists__content-buttons-second-button2-dark,
+.scientists__content-buttons-second-button3-dark,
+.scientists__content-buttons-second-button4-dark,
+.scientists__content-buttons-third-button-dark {
+  white-space: pre;
+  color: #000;
+  text-align: right;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-flex;
+  padding: 10px 20px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 20px;
+  background: #fff;
+}
+
 .footer {
   background-color: #fff;
   padding: 60px 0;
 }
 .footer__content {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-evenly;
   gap: 180px;
 }
@@ -1070,6 +1238,49 @@ body {
   line-height: normal;
 }
 
+.footer-dark {
+  background-color: #000;
+}
+
+.footer__content-adres-group-text-social-dark {
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+  margin-bottom: 0;
+}
+
+.footer__content-subscribe-main-button-dark {
+  display: inline-flex;
+  padding: 10px;
+  align-items: flex-start;
+  gap: 10px;
+  border: none;
+  border-radius: 20px;
+  background: #fff;
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer__content-subscribe-text-dark {
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.logo-footer-dark {
+  display: block;
+}
+
 body {
   background-image: url("../images/background.png");
   background-repeat: no-repeat;
@@ -1087,6 +1298,14 @@ body {
   flex-direction: column;
   align-items: center;
   background: #fff;
+  margin: 0 175px;
+}
+
+.main-dark {
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 175px;
 }
 

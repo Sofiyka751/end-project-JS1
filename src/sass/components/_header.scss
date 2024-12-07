@@ -47,7 +47,7 @@
   }
 }
 
-#output {
+.output {
   color: #000;
   text-align: right;
   font-family: "Montserrat Alternates";
@@ -68,14 +68,14 @@ body {
 }
 
 // body.light {
-//   // background-color: #f9f9f9;
-//   // color: #333;
+//   background: #f9f9f9;
+//   color: #333;
 // }
 
-// body.dark {
-//   // background-color: #121212;
-//   // color: #fff;
-// }
+body.dark {
+  background-color: #121212;
+  color: #fff;
+}
 
 .toggle-container {
   position: relative;
@@ -133,12 +133,30 @@ body {
   content: url("../../images/moon.png");
 }
 
-.toggle-checkbox:checked + .header__content-group-nav-list-link-dark {
-  color: purple;
+.header__content-group-nav-list-link-dark {
+  color: #fff;
   font-family: "Montserrat Alternates";
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+}
+
+.header-dark {
+  background-color: #000;
+}
+
+.header-output-dark {
+  color: #fff;
+}
+
+.header__content-group-nav-list-select-dark {
+  background: black;
+  color: white;
+  border: none;
+}
+
+.logo-dark {
+  display: block;
 }

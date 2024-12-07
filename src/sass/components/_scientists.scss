@@ -50,20 +50,25 @@
         align-items: flex-end;
         gap: 20px;
         &-button {
-          color: $white;
-          text-align: right;
-          font-family: "Montserrat Alternates";
-          font-size: 12px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-          display: inline-flex;
-          padding: 10px 20px;
-          align-items: flex-start;
-          gap: 10px;
-          border-radius: 20px;
-          background: $black;
-          box-shadow: 3px 3px 0px 0px $shadow;
+          &1,
+          &2,
+          &3,
+          &4 {
+            color: $white;
+            text-align: right;
+            font-family: "Montserrat Alternates";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            display: inline-flex;
+            padding: 10px 20px;
+            align-items: flex-start;
+            gap: 10px;
+            border-radius: 20px;
+            background: $black;
+            box-shadow: 3px 3px 0px 0px $shadow;
+          }
         }
       }
       &-second {
@@ -72,21 +77,26 @@
         align-items: flex-start;
         gap: 20px;
         &-button {
-          white-space: pre;
-          color: $white;
-          text-align: right;
-          font-family: "Montserrat Alternates";
-          font-size: 12px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-          display: inline-flex;
-          padding: 10px 20px;
-          align-items: flex-start;
-          gap: 10px;
-          border-radius: 20px;
-          background: $black;
-          box-shadow: 3px 3px 0px 0px $shadow;
+          &1,
+          &2,
+          &3,
+          &4 {
+            white-space: pre;
+            color: $white;
+            text-align: right;
+            font-family: "Montserrat Alternates";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            display: inline-flex;
+            padding: 10px 20px;
+            align-items: flex-start;
+            gap: 10px;
+            border-radius: 20px;
+            background: $black;
+            box-shadow: 3px 3px 0px 0px $shadow;
+          }
         }
       }
       &-third {
@@ -112,4 +122,39 @@
 }
 .scientist {
   border-radius: 20px;
+}
+
+.scientists__content-text-dark {
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 36px;
+}
+
+.scientists__content-buttons-first-button1-dark,
+.scientists__content-buttons-first-button2-dark,
+.scientists__content-buttons-first-button3-dark,
+.scientists__content-buttons-first-button4-dark,
+.scientists__content-buttons-second-button1-dark,
+.scientists__content-buttons-second-button2-dark,
+.scientists__content-buttons-second-button3-dark,
+.scientists__content-buttons-second-button4-dark,
+.scientists__content-buttons-third-button-dark {
+  white-space: pre;
+  color: #000;
+  text-align: right;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-flex;
+  padding: 10px 20px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 20px;
+  background: #fff;
 }

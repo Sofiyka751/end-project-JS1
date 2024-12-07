@@ -35,26 +35,219 @@ userNameInput.addEventListener("keydown", (event) => {
   }
 });
 
-// togle
+// toggle
 
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
+const logo = document.querySelector('.logo1')
+const logoDark = document.querySelector('.logo2')
 const toggleIcon = document.querySelector('.toggle-icon');
-const a = document.querySelector('.header__content-group-nav-list-link')
+const headerLink = document.querySelector('.header__content-group-nav-list-link');
+const headerLinkSecond = document.querySelector('.header__content-group-nav-list-link2');
+const headerContent = document.querySelector('.header');
+const headerUserName = document.querySelector('#output');
+const headerSelect = document.querySelector('.header__content-group-nav-list-select');
+const mainContent = document.querySelector('.main');
+const birthdayHeader = document.querySelector('.birthday__content-text');
+const computerNumberHeader = document.querySelector('.computer-number__content-text');
+const computerNumberButton = document.querySelector('.rock-paper-scissor__content-play-down-button')
+const calculatorHeader = document.querySelector('.calculator__content-text')
+const calculatorPlus = document.querySelector('.calculator__content-play-form-group-plus-label')
+const calculatorMultiplication = document.querySelector('.calculator__content-play-form-group-multiplication-label')
+const calculatorMinus = document.querySelector('.calculator__content-play-form-group-minus-label')
+const calculatorDivision = document.querySelector('.calculator__content-play-form-group-division-label')
+const calculatorResault = document.querySelector('.calculator__content-play-form-group-button')
+const timeHeader = document.querySelector('.calculator-time__content-text')
+const footballHeader = document.querySelector('.football__content-text')
+const threeNumberHeader = document.querySelector('.three-number__content-text')
+const threeNumberResault = document.querySelector('.three-number__content-play-resault')
+const scientistHeader = document.querySelector('.scientists__content-text')
+const scientistButtonFirstOne = document.querySelector('.scientists__content-buttons-first-button1')
+const scientistButtonFirstTwo = document.querySelector('.scientists__content-buttons-first-button2')
+const scientistButtonFirstThree = document.querySelector('.scientists__content-buttons-first-button3')
+const scientistButtonFirstFour = document.querySelector('.scientists__content-buttons-first-button4')
+const scientistButtonSecondOne = document.querySelector('.scientists__content-buttons-second-button1')
+const scientistButtonSecondTwo = document.querySelector('.scientists__content-buttons-second-button2')
+const scientistButtonSecondThree = document.querySelector('.scientists__content-buttons-second-button3')
+const scientistButtonSecondFour = document.querySelector('.scientists__content-buttons-second-button4')
+const scientistButtonThird = document.querySelector('.scientists__content-buttons-third-button')
+const footerContent = document.querySelector('.footer')
+const footerPhoneNumber = document.querySelector('.footer__content-adres-group-text-phone_number')
+const footerEmail = document.querySelector('.footer__content-adres-group-text-email')
+const footerFacebook = document.querySelector('.footer__content-adres-group-text-facebook')
+const footerTwitter = document.querySelector('.footer__content-adres-group-text-twitter')
+const footerInstagram = document.querySelector('.footer__content-adres-group-text-instagram')
+const footerButton = document.querySelector('.footer__content-subscribe-main-button')
+const footerText = document.querySelector('.footer__content-subscribe-text')
+const footerLogo = document.querySelector('.logo1-footer')
+const footerLogoDark = document.querySelector('.logo2-footer')
 
 body.classList.add('light');
+
+
 
 themeToggle.addEventListener('change', () => {
   if (themeToggle.checked) {
     body.classList.remove('light');
     body.classList.add('dark');
-    a.classList.remove('header__content-group-nav-list-link');
-    a.classList.add('header__content-group-nav-list-link-dark');
+    headerLink.classList.remove('header__content-group-nav-list-link');
+    headerLink.classList.add('header__content-group-nav-list-link-dark');
+    headerLinkSecond.classList.remove('header__content-group-nav-list-link');
+    headerLinkSecond.classList.add('header__content-group-nav-list-link-dark');
+    headerContent.classList.add('header-dark');
+    headerUserName.classList.remove('output');
+    headerUserName.classList.add('header-output-dark');
+    headerSelect.classList.remove('header__content-group-nav-list-select');
+    headerSelect.classList.add('header__content-group-nav-list-select-dark');
+    mainContent.classList.remove('main');
+    mainContent.classList.add('main-dark');
+    birthdayHeader.classList.remove('birthday__content-text');
+    birthdayHeader.classList.add('birthday__content-text-dark');
+    computerNumberHeader.classList.remove('computer-number__content-text')
+    computerNumberHeader.classList.add('computer-number__content-text-dark')
+    computerNumberButton.classList.add('rock-paper-scissor__content-play-down-button-dark')
+    calculatorHeader.classList.remove('calculator__content-text')
+    calculatorHeader.classList.add('calculator__content-text-dark')
+    calculatorPlus.classList.remove('calculator__content-play-form-group-plus-label')
+    calculatorPlus.classList.add('calculator__content-play-form-group-plus-label-dark')
+    calculatorMultiplication.classList.remove('calculator__content-play-form-group-multiplication-label')
+    calculatorMultiplication.classList.add('calculator__content-play-form-group-multiplication-label-dark')
+    calculatorMinus.classList.remove('calculator__content-play-form-group-minus-label')
+    calculatorMinus.classList.add('calculator__content-play-form-group-minus-label-dark')
+    calculatorDivision.classList.remove('calculator__content-play-form-group-division-label')
+    calculatorDivision.classList.add('calculator__content-play-form-group-division-label-dark')
+    calculatorResault.classList.remove('calculator__content-play-form-group-button')
+    calculatorResault.classList.add('calculator__content-play-form-group-button-dark')
+    timeHeader.classList.remove('calculator-time__content-text')
+    timeHeader.classList.add('calculator-time__content-text-dark')
+    footballHeader.classList.remove('football__content-text')
+    footballHeader.classList.add('football__content-text-dark')
+    threeNumberHeader.classList.remove('three-number__content-text')
+    threeNumberHeader.classList.add('three-number__content-text-dark')
+    threeNumberResault.classList.remove('three-number__content-play-resault')
+    threeNumberResault.classList.add('three-number__content-play-resault-dark')
+    scientistHeader.classList.remove('scientists__content-text')
+    scientistHeader.classList.add('scientists__content-text-dark')
+    scientistButtonFirstOne.classList.remove('scientists__content-buttons-first-button1')
+    scientistButtonFirstOne.classList.add('scientists__content-buttons-first-button1-dark')
+    scientistButtonFirstTwo.classList.remove('scientists__content-buttons-first-button2')
+    scientistButtonFirstTwo.classList.add('scientists__content-buttons-first-button2-dark')
+    scientistButtonFirstThree.classList.remove('scientists__content-buttons-first-button3')
+    scientistButtonFirstThree.classList.add('scientists__content-buttons-first-button3-dark')
+    scientistButtonFirstFour.classList.remove('scientists__content-buttons-first-button4')
+    scientistButtonFirstFour.classList.add('scientists__content-buttons-first-button4-dark')
+    scientistButtonSecondOne.classList.remove('scientists__content-buttons-second-button1')
+    scientistButtonSecondOne.classList.add('scientists__content-buttons-second-button1-dark')
+    scientistButtonSecondTwo.classList.remove('scientists__content-buttons-second-button2')
+    scientistButtonSecondTwo.classList.add('scientists__content-buttons-second-button2-dark')
+    scientistButtonSecondThree.classList.remove('scientists__content-buttons-second-button3')
+    scientistButtonSecondThree.classList.add('scientists__content-buttons-second-button3-dark')
+    scientistButtonSecondFour.classList.remove('scientists__content-buttons-second-button4')
+    scientistButtonSecondFour.classList.add('scientists__content-buttons-second-button4-dark')
+    scientistButtonThird.classList.remove('scientists__content-buttons-third-button')
+    scientistButtonThird.classList.add('scientists__content-buttons-third-button-dark')
+    footerContent.classList.remove('footer')
+    footerContent.classList.add('footer-dark')
+    footerPhoneNumber.classList.remove('footer__content-adres-group-text-phone_number')
+    footerPhoneNumber.classList.add('footer__content-adres-group-text-social-dark')
+    footerEmail.classList.remove('footer__content-adres-group-text-email')
+    footerEmail.classList.add('footer__content-adres-group-text-social-dark')
+    footerFacebook.classList.remove('footer__content-adres-group-text-facebook')
+    footerFacebook.classList.add('footer__content-adres-group-text-social-dark')
+    footerTwitter.classList.remove('footer__content-adres-group-text-twitter')
+    footerTwitter.classList.add('footer__content-adres-group-text-social-dark')
+    footerInstagram.classList.remove('footer__content-adres-group-text-instagram')
+    footerInstagram.classList.add('footer__content-adres-group-text-social-dark')
+    footerButton.classList.remove('footer__content-subscribe-main-button')
+    footerButton.classList.add('footer__content-subscribe-main-button-dark')
+    footerText.classList.remove('footer__content-subscribe-text')
+    footerText.classList.add('footer__content-subscribe-text-dark')
+    logo.classList.remove('logo1')
+    logoDark.classList.remove('logo2')
+    logoDark.classList.add('logo-dark')
+    footerLogo.classList.remove('footer-logo1')
+    footerLogoDark.classList.remove('footer-logo2')
+    footerLogoDark.classList.add('logo-footer-dark')
   } else {
     body.classList.remove('dark');
-    body.classList.add('light');
-    a.classList.remove('header__content-group-nav-list-link-dark');
-    a.classList.add('header__content-group-nav-list-link');
+    headerLink.classList.remove('header__content-group-nav-list-link-dark');
+    headerLink.classList.add('header__content-group-nav-list-link');
+    headerLinkSecond.classList.remove('header__content-group-nav-list-link-dark');
+    headerLinkSecond.classList.add('header__content-group-nav-list-link');
+    headerContent.classList.remove('header-dark');
+    headerUserName.classList.remove('header-output-dark');
+    headerUserName.classList.add('output');
+    headerSelect.classList.add('header__content-group-nav-list-select');
+    headerSelect.classList.remove('header__content-group-nav-list-select-dark');
+    mainContent.classList.add('main');
+    mainContent.classList.remove('main-dark');
+    birthdayHeader.classList.add('birthday__content-text');
+    birthdayHeader.classList.remove('birthday__content-text-dark');
+    computerNumberHeader.classList.add('computer-number__content-text')
+    computerNumberHeader.classList.remove('computer-number__content-text-dark')
+    computerNumberButton.classList.remove('rock-paper-scissor__content-play-down-button-dark')
+    calculatorHeader.classList.add('calculator__content-text')
+    calculatorHeader.classList.remove('calculator__content-text-dark')
+    calculatorPlus.classList.add('calculator__content-play-form-group-plus-label')
+    calculatorPlus.classList.remove('calculator__content-play-form-group-plus-label-dark')
+    calculatorMultiplication.classList.add('calculator__content-play-form-group-multiplication-label')
+    calculatorMultiplication.classList.remove('calculator__content-play-form-group-multiplication-label-dark')
+    calculatorMinus.classList.add('calculator__content-play-form-group-minus-label')
+    calculatorMinus.classList.remove('calculator__content-play-form-group-minus-label-dark')
+    calculatorDivision.classList.add('calculator__content-play-form-group-division-label')
+    calculatorDivision.classList.remove('calculator__content-play-form-group-division-label-dark')
+    calculatorResault.classList.add('calculator__content-play-form-group-button')
+    calculatorResault.classList.remove('calculator__content-play-form-group-button-dark')
+    timeHeader.classList.add('calculator-time__content-text')
+    timeHeader.classList.remove('calculator-time__content-text-dark')
+    footballHeader.classList.add('football__content-text')
+    footballHeader.classList.remove('football__content-text-dark')
+    threeNumberHeader.classList.add('three-number__content-text')
+    threeNumberHeader.classList.remove('three-number__content-text-dark')
+    threeNumberResault.classList.add('three-number__content-play-resault')
+    threeNumberResault.classList.remove('three-number__content-play-resault-dark')
+    scientistHeader.classList.add('scientists__content-text')
+    scientistHeader.classList.remove('scientists__content-text-dark')
+    scientistButtonFirstOne.classList.add('scientists__content-buttons-first-button1')
+    scientistButtonFirstOne.classList.remove('scientists__content-buttons-first-button1-dark')
+    scientistButtonFirstTwo.classList.add('scientists__content-buttons-first-button2')
+    scientistButtonFirstTwo.classList.remove('scientists__content-buttons-first-button2-dark')
+    scientistButtonFirstThree.classList.add('scientists__content-buttons-first-button3')
+    scientistButtonFirstThree.classList.remove('scientists__content-buttons-first-button3-dark')
+    scientistButtonFirstFour.classList.add('scientists__content-buttons-first-button4')
+    scientistButtonFirstFour.classList.remove('scientists__content-buttons-first-button4-dark')
+    scientistButtonSecondOne.classList.add('scientists__content-buttons-second-button1')
+    scientistButtonSecondOne.classList.remove('scientists__content-buttons-second-button1-dark')
+    scientistButtonSecondTwo.classList.add('scientists__content-buttons-second-button2')
+    scientistButtonSecondTwo.classList.remove('scientists__content-buttons-second-button2-dark')
+    scientistButtonSecondThree.classList.add('scientists__content-buttons-second-button3')
+    scientistButtonSecondThree.classList.remove('scientists__content-buttons-second-button3-dark')
+    scientistButtonSecondFour.classList.add('scientists__content-buttons-second-button4')
+    scientistButtonSecondFour.classList.remove('scientists__content-buttons-second-button4-dark')
+    scientistButtonThird.classList.add('scientists__content-buttons-third-button')
+    scientistButtonThird.classList.remove('scientists__content-buttons-third-button-dark')
+    footerContent.classList.add('footer')
+    footerContent.classList.remove('footer-dark')
+    footerPhoneNumber.classList.add('footer__content-adres-group-text-phone_number')
+    footerPhoneNumber.classList.remove('footer__content-adres-group-text-social-dark')
+    footerEmail.classList.add('footer__content-adres-group-text-email')
+    footerEmail.classList.remove('footer__content-adres-group-text-social-dark')
+    footerFacebook.classList.add('footer__content-adres-group-text-facebook')
+    footerFacebook.classList.remove('footer__content-adres-group-text-social-dark')
+    footerTwitter.classList.add('footer__content-adres-group-text-twitter')
+    footerTwitter.classList.remove('footer__content-adres-group-text-social-dark')
+    footerInstagram.classList.add('footer__content-adres-group-text-instagram')
+    footerInstagram.classList.remove('footer__content-adres-group-text-social-dark')
+    footerButton.classList.add('footer__content-subscribe-main-button')
+    footerButton.classList.remove('footer__content-subscribe-main-button-dark')
+    footerText.classList.add('footer__content-subscribe-text')
+    footerText.classList.remove('footer__content-subscribe-text-dark')
+    logo.classList.add('logo1')
+    logoDark.classList.add('logo2')
+    logoDark.classList.remove('logo-dark')
+    footerLogo.classList.add('footer-logo1')
+    footerLogoDark.classList.add('footer-logo2')
+    footerLogoDark.classList.remove('logo-footer-dark')
   }
 });
 
@@ -432,33 +625,41 @@ function reorderScientists(orderedScientists) {
   sortedPhotos.forEach((photo) => container.appendChild(photo));
 }
 
-document
-  .querySelectorAll(".scientists__content-buttons-first-button")[0]
-  .addEventListener("click", getScientistsBornIn19thCentury);
-document
-  .querySelectorAll(".scientists__content-buttons-first-button")[1]
-  .addEventListener("click", sortScientistsAlphabetically);
-document
-  .querySelectorAll(".scientists__content-buttons-first-button")[2]
-  .addEventListener("click", sortScientistsByLifespan);
-document
-  .querySelectorAll(".scientists__content-buttons-first-button")[3]
-  .addEventListener("click", getLatestBornScientist);
-document
-  .querySelectorAll(".scientists__content-buttons-second-button")[0]
-  .addEventListener("click", getBirthYearOfEinstein);
-document
-  .querySelectorAll(".scientists__content-buttons-second-button")[1]
-  .addEventListener("click", getScientistsWithSurnameStartingWithC);
-document
-  .querySelectorAll(".scientists__content-buttons-second-button")[2]
-  .addEventListener("click", removeScientistsWithNameStartingWithA);
-document
-  .querySelectorAll(".scientists__content-buttons-second-button")[3]
-  .addEventListener("click", getScientistsWithLongestAndShortestLifespan);
-document
-  .querySelectorAll(".scientists__content-buttons-third-button")[0]
-  .addEventListener("click", getScientistsWithMatchingInitials);
+if (scientistButtonFirstOne) {
+  scientistButtonFirstOne.addEventListener("click", getScientistsBornIn19thCentury);
+}
+
+if (scientistButtonFirstTwo) {
+  scientistButtonFirstTwo.addEventListener("click", sortScientistsAlphabetically);
+}
+
+if (scientistButtonFirstThree) {
+  scientistButtonFirstThree.addEventListener("click", sortScientistsByLifespan);
+}
+
+if (scientistButtonFirstFour) {
+  scientistButtonFirstFour.addEventListener("click", getLatestBornScientist);
+}
+
+if (scientistButtonSecondOne) {
+  scientistButtonSecondOne.addEventListener("click", getBirthYearOfEinstein);
+}
+
+if (scientistButtonSecondTwo) {
+  scientistButtonSecondTwo.addEventListener("click", getScientistsWithSurnameStartingWithC);
+}
+
+if (scientistButtonSecondThree) {
+  scientistButtonSecondThree.addEventListener("click", removeScientistsWithNameStartingWithA);
+}
+
+if (scientistButtonSecondFour) {
+  scientistButtonSecondFour.addEventListener("click", getScientistsWithLongestAndShortestLifespan);
+}
+
+if (scientistButtonThird) {
+  scientistButtonThird.addEventListener("click", getScientistsWithMatchingInitials);
+}
 
 // FOOTER
 

@@ -27,7 +27,6 @@ hr {
   padding: 0;
 }
 
-
 @import "./components/header", "./components/modal", "./components/birthday",
   "./components/computer-number", "./components/rock-paper-scissor",
   "./components/calculator", "./components/calculator-time",
@@ -52,10 +51,15 @@ body {
   align-items: center;
   background: #fff;
   margin: 0 175px;
- 
 }
 
-
+.main-dark {
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 175px;
+}
 
 .line {
   width: 536px;
