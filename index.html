@@ -27,12 +27,12 @@
             <div class="header__content-group-nav-list navigation-list">
               <select name="select" class="header__content-group-nav-list-select navigation-list-select">
                 <option class="header__content-group-list-select-option navigation-list-select-option">Інтерактив</option>
-                <option class="header__content-group-list-select-option navigation-list-select-option">Числовий</option>
-                <option class="header__content-group-list-select-option navigation-list-select-option">Ігровий</option>
-                <option class="header__content-group-list-select-option navigation-list-select-option">Ознайомчий</option>
+                <option class="header__content-group-list-select-option navigation-list-select-option" href="#number">Числовий</option>
+                <option class="header__content-group-list-select-option navigation-list-select-option" href="#game">Ігровий</option>
+                <option class="header__content-group-list-select-option navigation-list-select-option" href="#team">Ознайомчий</option>
               </select>
-              <a href="#" class="header__content-group-nav-list-link navigation-list-link">Наша команда</a>
-              <a href="#" class="header__content-group-nav-list-link header__content-group-nav-list-link2 navigation-list-link">Контакти</a>
+              <a href="#team" class="header__content-group-nav-list-link navigation-list-link">Наша команда</a>
+              <a href="#footer" class="header__content-group-nav-list-link header__content-group-nav-list-link2 navigation-list-link">Контакти</a>
             </div>
             <div class="header__content-group-nav-list-second">
               <div class="toggle-container">
@@ -94,7 +94,7 @@
 
       <hr class="line">
 
-      <section class="computer-number">
+      <section class="computer-number" id="number">
         <div class="container computer-number__content">
           <p class="computer-number__content-text">Вгадай число, яке загадав комп’ютер</p>
           <div class="computer-number__content-play">
@@ -113,7 +113,7 @@
 
       <hr class="line">
 
-      <section class="rock-paper-scissor">
+      <section class="rock-paper-scissor" id="game">
         <div class="container rock-paper-scissor__content">
           <p class="rock-paper-scissor__content-text">Камінь - ножиці - папір</p>
           <div class="rock-paper-scissor__content-play">
@@ -234,7 +234,7 @@
       <hr class="line">
 
       <section id="mySlider" class="team splide">
-        <div class="container team__content splide__track">
+        <div class="container team__content splide__track" id="team">
           <ul class="splide__list">
             <li class="splide__slide">
               <img class="splide__slide-image" src="./src/images/will.jpg" alt="upss">
@@ -332,7 +332,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container footer__content">
         <a href="#" class="footer__content-logo">
           <svg width="93px" height="38px">
